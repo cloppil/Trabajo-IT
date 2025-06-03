@@ -29,3 +29,5 @@ hs_err_pid
 /build/
 /lib/
 /Trabajo_it/nbproject/private/
+/Trabajo_it/build/
+/Trabajo_it/dist/
