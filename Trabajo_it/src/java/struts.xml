@@ -5,6 +5,16 @@
 <struts>
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
+        
+        
+        <action name = "iniciarSesionForm">
+            <result>/vistas/iniciarSesionForm.jsp</result>
+        </action>
+        <action name = "iniciarSesion" class = "controlador.IniciarSesionAction">
+            <result name="mecanico">/vistas/mecanico/mecanico.jsp</result>
+            <result name="cliente">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
 
     </package>
 </struts>
