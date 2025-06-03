@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03-jun-2025 9:41:36 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Reparacion" table="reparacion" catalog="taller_mecanico" optimistic-lock="version">
+        <id name="idReparacion" type="int">
+            <column name="idReparacion" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cita" class="modelo.Cita" fetch="select">
+            <column name="idCita" not-null="true" />
+        </many-to-one>
+        <property name="tipo" type="string">
+            <column name="tipo" length="11" not-null="true" />
+        </property>
+        <property name="precio" type="double">
+            <column name="precio" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="comentario" type="string">
+            <column name="comentario" length="35" not-null="true" />
+        </property>
+        <set name="piezases" table="piezas" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idReparacion" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Piezas" />
+        </set>
+    </class>
+</hibernate-mapping>
