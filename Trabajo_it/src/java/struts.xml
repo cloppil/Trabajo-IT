@@ -15,6 +15,7 @@
             <result name="cliente">/vistas/cliente/cliente.jsp</result>
         </action>
         
+        
 
     </package>
 </struts>
