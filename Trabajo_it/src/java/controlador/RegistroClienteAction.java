@@ -6,46 +6,34 @@
 package controlador;
 
 import DAO.ClienteDAO;
-import DAO.MecanicoDAO;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import java.util.Map;
 import modelo.Cliente;
-import modelo.Mecanico;
 
 /**
  *
  * @author ferna
  */
-public class IniciarSesionAction extends ActionSupport {
-
+public class RegistroClienteAction extends ActionSupport {
+    
+    private String nombre;
+    private int telefono;
     private String dni;
     private String password;
     private String rolUsuario;
-
-    public IniciarSesionAction() {
+    
+    public RegistroClienteAction() {
     }
-
+    
     public String execute() throws Exception {
         Map<String, Object> session = ActionContext.getContext().getSession();
-
-        MecanicoDAO mecDAO = new MecanicoDAO();
-        Mecanico mec = mecDAO.loginMecanico(dni, password);
-
-        if (mec != null) {
-            session.put("mecanico", mec);
-            return "mecanico";
-        } else {
-            ClienteDAO cliDAO = new ClienteDAO();
-            Cliente cli = cliDAO.loginCliente(dni, password);
-            if (cli != null) {
-                session.put("cliente", cli);
-                return "cliente";
-            } else {
-                return ERROR;
-            }
-        }
+        ClienteDAO cliDAO = new ClienteDAO(); 
+        Cliente cli = new Cliente (dni, nombre, "", password,telefono);
+        cliDAO.altaCliente(cli);
+        return SUCCESS;
     }
+    
     
     public String elegirRegistro(){
         if(rolUsuario.equals("mecanico")){
@@ -64,6 +52,24 @@ public class IniciarSesionAction extends ActionSupport {
     public void setRolUsuario(String rolUsuario) {
         this.rolUsuario = rolUsuario;
     }
+    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
 
     public String getDni() {
         return dni;
@@ -80,5 +86,5 @@ public class IniciarSesionAction extends ActionSupport {
     public void setPassword(String password) {
         this.password = password;
     }
-
+    
 }

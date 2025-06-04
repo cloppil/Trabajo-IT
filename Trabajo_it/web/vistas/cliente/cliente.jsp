@@ -64,7 +64,7 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading text-center">Gestión de Cliente</div>
                         <div class="panel-body">
-                            <s:form action="bajaCliente">
+                            <s:form action="irBajaCliente">
                                 <button type="submit" class="btn btn-primary btn-block">Baja Cliente</button>
                             </s:form>
                             <s:form action="">
