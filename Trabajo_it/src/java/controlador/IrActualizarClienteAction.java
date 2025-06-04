@@ -6,47 +6,36 @@
 package controlador;
 
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.ServletActionContext;
-import javax.servlet.http.HttpSession;
-import DAO.ClienteDAO;
 import modelo.Cliente;
 
-public class ActualizarClienteAction extends ActionSupport {
+public class IrActualizarClienteAction extends ActionSupport {
 
     private String dniCliente;
+
+    // Si quieres prellenar los campos:
     private String nombre;
     private String email;
     private String contrasenia;
     private int telefono;
 
-    private String mensaje;
-
     public String execute() {
-        try {
-            ClienteDAO dao = new ClienteDAO();
+        // Suponiendo que tienes el cliente en la sesión
+        Cliente cliente = (Cliente) org.apache.struts2.ServletActionContext.getRequest().getSession().getAttribute("cliente");
 
-            Cliente cliente = new Cliente();
-            cliente.setDniCliente(dniCliente);
-            cliente.setNombre(nombre);
-            cliente.setEmail(email);
-            cliente.setContrasenia(contrasenia);
-            cliente.setTelefono(telefono);
-
-            dao.actualizarCliente(cliente);
-
-            // ACTUALIZAR EL CLIENTE EN SESIÓN
-            HttpSession session = ServletActionContext.getRequest().getSession();
-            session.setAttribute("cliente", cliente);
-
-            mensaje = "Cliente actualizado correctamente";
+        if (cliente != null) {
+            dniCliente = cliente.getDniCliente();
+            // Si quieres prellenar los campos:
+            nombre = cliente.getNombre();
+            email = cliente.getEmail();
+            contrasenia = cliente.getContrasenia();
+            telefono = cliente.getTelefono();
             return SUCCESS;
-        } catch (Exception e) {
-            mensaje = "Error al actualizar cliente: " + e.getMessage();
+        } else {
             return ERROR;
         }
     }
 
-    // Getters y setters (muy importante para que Struts2 funcione)
+    // Getters y setters
     public String getDniCliente() {
         return dniCliente;
     }
@@ -85,13 +74,5 @@ public class ActualizarClienteAction extends ActionSupport {
 
     public void setTelefono(int telefono) {
         this.telefono = telefono;
-    }
-
-    public String getMensaje() {
-        return mensaje;
-    }
-
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
     }
 }

@@ -47,5 +47,31 @@
             <result name="success">/vistas/bienvenida.jsp</result>
         </action>
         
+        <action name = "irAltaVehiculo">
+            <result>/vistas/vehiculo/altaVehiculo.jsp</result>
+        </action>
+        
+        <action name = "altaVehiculo" class="controlador.AltaVehiculoAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
+        <action name = "irBajaVehiculo">
+            <result>/vistas/vehiculo/bajaVehiculo.jsp</result>
+        </action>
+        
+        
+        <action name = "bajaVehiculo" class="controlador.BajaVehiculoAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
+        
+        <action name = "irActualizarCliente" class="controlador.IrActualizarClienteAction">
+            <result name="success">/vistas/cliente/actualizarCliente.jsp</result>
+        </action>
+        
+        <action name = "actualizarCliente" class="controlador.ActualizarClienteAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
     </package>
 </struts>
