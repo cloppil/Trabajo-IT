@@ -33,8 +33,8 @@
                             <s:form action="irActualizarCliente">
                                 <button type="submit" class="btn btn-outline-primary">Actualizar Mis Datos</button>
                             </s:form>
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-primary">Consultar Mis Datos</button>
+                            <s:form action="irConsultarCliente">
+                                <button type="submit" class="btn btn-primary btn-block">Consultar Mis Datos</button>
                             </s:form>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                             <s:form action="">
                                 <button type="submit" class="btn btn-outline-info">Actualizar Vehículo</button>
                             </s:form>
-                            <s:form action="">
+                            <s:form action="irConsultarVehiculos">
                                 <button type="submit" class="btn btn-outline-info">Consultar Vehículos</button>
                             </s:form>
                         </div>

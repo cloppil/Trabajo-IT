@@ -58,4 +58,14 @@ public class ClienteDAO {
         tx.commit();
     }
 
+    public Cliente consultarCliente(String dni) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("FROM Cliente WHERE dniCliente = :dni");
+        q.setParameter("dni", dni);
+        Cliente cli = (Cliente) q.uniqueResult();
+        tx.commit();
+        return cli;
+    }
+
 }
