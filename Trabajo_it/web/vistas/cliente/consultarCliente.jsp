@@ -30,9 +30,10 @@
                 </tr>
             </table>
 
-            <form action="cliente.jsp" method="get" style="display:inline;">
-                <button type="submit" class="btn btn-secondary">Volver al Menú</button>
-            </form>
+            <s:form action="cliente" method="get">
+                <s:submit value="Volver al Menú" cssClass="btn btn-secondary"/>
+            </s:form>
+
 
         </div>
 

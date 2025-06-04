@@ -54,7 +54,7 @@
                             <s:form action="">
                                 <button type="submit" class="btn btn-outline-info">Actualizar Vehículo</button>
                             </s:form>
-                            <s:form action="">
+                            <s:form action="irConsultarVehiculos">
                                 <button type="submit" class="btn btn-outline-info">Consultar Vehículos</button>
                             </s:form>
                         </div>

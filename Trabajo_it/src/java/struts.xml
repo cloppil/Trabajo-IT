@@ -23,6 +23,10 @@
         <action name = "irBajaCliente" class = "controlador.IrBajaClienteAction">
             <result name="success">/vistas/cliente/bajaCliente.jsp</result>
         </action>
+        
+        <action name = "cliente">
+            <result>/vistas/cliente/cliente.jsp</result>
+        </action>
 
         
         <action name= "registrarseForm">
@@ -77,8 +81,19 @@
             <result>/vistas/cliente/consultarCliente.jsp</result>
         </action>
         
-        
         <action name = "consultarCliente" class="controlador.ConsultarClienteAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
+        <action name = "consultarVehiculos" class="controlador.ConsultarVehiculosAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
+        <action name = "irConsultarVehiculos" class="controlador.IrConsultarVehiculosAction">
+            <result name="success">/vistas/vehiculo/consultarVehiculos.jsp</result>
+        </action>
+        
+        <action name = "consultarVehiculos" class="controlador.ConsultarVehiculosAction">
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
         
