@@ -15,15 +15,15 @@
             <result name="cliente">/vistas/cliente/cliente.jsp</result>
         </action>
 
-        
-        <action name = "actualizarCliente">
-            <result name = "success">vistas/cliente/clientes.jsp</result>
+        <action name = "actualizarCliente" class = "controlador.ActualizarClienteAction">
+            <result name = "success">/vistas/cliente/clientes.jsp</result>
+
         </action>
         
-        
-        <action name = "bajaCliente" class = "controlador.BajaClienteAction">
+        <action name = "irBajaCliente" class = "controlador.IrBajaClienteAction">
             <result name="success">/vistas/cliente/bajaCliente.jsp</result>
         </action>
+
         
         <action name= "registrarseForm">
             <result>/vistas/registrarseForm.jsp</result>
@@ -43,6 +43,9 @@
             <result name = "success">/vistas/iniciarSesionForm.jsp</result>
         </action>
         
-
+        <action name = "bajaCliente" class = "controlador.BajaClienteAction">
+            <result name="success">/vistas/bienvenida.jsp</result>
+        </action>
+        
     </package>
 </struts>

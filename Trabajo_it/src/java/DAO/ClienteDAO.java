@@ -17,25 +17,34 @@ import org.hibernate.Transaction;
  * @author ferna
  */
 public class ClienteDAO {
-    
+
     Session session = null;
 
     public Cliente loginCliente(String dni, String password) {
-        session=HibernateUtil.getSessionFactory().getCurrentSession();
-        Transaction tx=session.beginTransaction();
-        Query q=session.createQuery("From Cliente where dniCliente='"+dni+"' and contrasenia='"+password+"'");
-        Cliente cli = (Cliente)q.uniqueResult();
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("From Cliente where dniCliente='" + dni + "' and contrasenia='" + password + "'");
+        Cliente cli = (Cliente) q.uniqueResult();
         tx.commit();
         return cli;
     }
 
     public void altaCliente(Cliente cli) {
-        
+
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         session.save(cli);
         tx.commit();
-        
     }
+        
+
     
+
+    public void bajaPropietario(Cliente c) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.delete(c);
+        tx.commit();
+    }
+
 }

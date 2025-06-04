@@ -5,7 +5,11 @@
  */
 package controlador;
 
+import DAO.ClienteDAO;
 import static com.opensymphony.xwork2.Action.SUCCESS;
+import com.opensymphony.xwork2.ActionContext;
+import java.util.Map;
+import modelo.Cliente;
 
 /**
  *
@@ -17,6 +21,11 @@ public class BajaClienteAction {
     }
     
     public String execute() throws Exception {
+        Map<String, Object> session = ActionContext.getContext().getSession();
+        Cliente c = (Cliente) session.get("cliente");
+        ClienteDAO cliDAO = new ClienteDAO();
+        cliDAO.bajaPropietario(c);
+        session.clear();
         return SUCCESS;
     }
     
