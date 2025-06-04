@@ -27,7 +27,7 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-primary text-white text-center">Gestión de Mecanico</div>
                         <div class="card-body d-grid gap-2">
-                            <s:form action="">
+                            <s:form action="irBajaMecanico">
                                 <button type="submit" class="btn btn-outline-primary">Baja Mecánico</button>
                             </s:form>
                             <s:form action="">

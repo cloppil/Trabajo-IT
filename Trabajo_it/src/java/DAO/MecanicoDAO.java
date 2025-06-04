@@ -27,5 +27,12 @@ public class MecanicoDAO {
         tx.commit();
         return mec;
     }
+
+    public void bajaPropietario(Mecanico m) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.delete(m);
+        tx.commit();
+    }
     
 }

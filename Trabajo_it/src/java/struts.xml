@@ -75,6 +75,13 @@
             <result>/vistas/vehiculo/actualizarVehiculo.jsp</result>
         </action>
         
+        <action name = "irBajaMecanico">
+            <result>/vistas/mecanico/bajaMecanico.jsp</result>
+        </action>
+        
+        <action name = "bajaMecanico" class = "controlador.BajaMecanicoAction">
+            <result name="success">/vistas/bienvenida.jsp</result>
+        </action>
         
     </package>
 </struts>
