@@ -23,5 +23,43 @@
         
         
 
+<<<<<<< Updated upstream
+=======
+        <action name = "irActualizarCliente" class = "controlador.IrActualizarClienteAction">
+            <result name="success">/vistas/cliente/actualizarCliente.jsp</result>
+        </action>
+        
+        <action name = "actualizarCliente" class = "controlador.ActualizarClienteAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
+        <action name = "irBajaCliente" class = "controlador.IrBajaClienteAction">
+            <result name="success">/vistas/cliente/bajaCliente.jsp</result>
+        </action>
+
+        
+        <action name= "registrarseForm">
+            <result>/vistas/registrarseForm.jsp</result>
+        </action>
+        
+        <action name="volverInicio">
+            <result>/vistas/bienvenida.jsp</result>
+        </action> 
+        
+        <action name="elegirRegistro"  class = "controlador.IniciarSesionAction" method="elegirRegistro">
+            <result name="altaMecanico">/vistas/mecanico/altaMecanico.jsp</result>
+            <result name="altaCliente">/vistas/cliente/altaCliente.jsp</result>
+            <result name="error">/registrarseForm.jsp</result>
+        </action>
+        
+        <action name = "registroCliente" class = "controlador.RegistroClienteAction">
+            <result name = "success">/vistas/iniciarSesionForm.jsp</result>
+        </action>
+        
+        <action name = "bajaCliente" class = "controlador.BajaClienteAction">
+            <result name="success">/vistas/bienvenida.jsp</result>
+        </action>
+        
+>>>>>>> Stashed changes
     </package>
 </struts>

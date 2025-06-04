@@ -67,9 +67,10 @@
                             <s:form action="bajaCliente">
                                 <button type="submit" class="btn btn-primary btn-block">Baja Cliente</button>
                             </s:form>
-                            <s:form action="">
+                            <form action="irActualizarCliente" method="get">
                                 <button type="submit" class="btn btn-primary btn-block">Actualizar Mis Datos</button>
-                            </s:form>
+                            </form>
+
                             <s:form action="">
                                 <button type="submit" class="btn btn-primary btn-block">Consultar Mis Datos</button>
                             </s:form>
