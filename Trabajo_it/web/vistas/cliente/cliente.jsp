@@ -82,10 +82,10 @@
                         <div class="panel panel-info">
                             <div class="panel-heading text-center">Vehículos del Cliente</div>
                             <div class="panel-body">
-                                <s:form action="">
+                                <s:form action="irAltaVehiculo">
                                     <button type="submit" class="btn btn-info btn-block">Alta Vehículo</button>
                                 </s:form>
-                                <s:form action="">
+                                <s:form action="irBajaVehiculo">
                                     <button type="submit" class="btn btn-info btn-block">Baja Vehículo</button>
                                 </s:form>
                                 <s:form action="">

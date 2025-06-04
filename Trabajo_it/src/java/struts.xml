@@ -19,12 +19,6 @@
             <result name = "success">7vistas/clientes/clientes.jsp</result>
         </action>
         
-        
-        
-        
-
-<<<<<<< Updated upstream
-=======
         <action name = "irActualizarCliente" class = "controlador.IrActualizarClienteAction">
             <result name="success">/vistas/cliente/actualizarCliente.jsp</result>
         </action>
@@ -33,8 +27,20 @@
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
         
-        <action name = "irBajaCliente" class = "controlador.IrBajaClienteAction">
-            <result name="success">/vistas/cliente/bajaCliente.jsp</result>
+        <action name = "irAltaVehiculo" class = "controlador.IrAltaVehiculoAction">
+            <result name="success">/vistas/cliente/altaVehiculo.jsp</result>
+        </action>
+        
+        <action name = "altaVehiculo" class = "controlador.AltaVehiculoAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
+        <action name = "irBajaVehiculo" class = "controlador.IrBajaVehiculoAction">
+            <result name="success">/vistas/cliente/bajaVehiculo.jsp</result>
+        </action>
+        
+        <action name = "bajaVehiculo" class = "controlador.BajaVehiculoAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
 
         
@@ -60,6 +66,5 @@
             <result name="success">/vistas/bienvenida.jsp</result>
         </action>
         
->>>>>>> Stashed changes
     </package>
 </struts>
