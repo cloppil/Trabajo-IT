@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-jun-2025, 16:05:35
+    Author     : ferna
+*/
+body.login-body {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+    max-width: 400px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-signin .form-control {
+    border-radius: 0.5rem;
+}
+
+.form-signin .btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.form-signin h1 {
+    font-size: 1.75rem;
+}
+
+a.link-primary {
+    text-decoration: none;
+}
+
+a.link-primary:hover {
+    text-decoration: underline;
+}
+
+
