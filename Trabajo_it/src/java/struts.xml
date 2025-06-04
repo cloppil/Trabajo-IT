@@ -14,13 +14,17 @@
             <result name="mecanico">/vistas/mecanico/mecanico.jsp</result>
             <result name="cliente">/vistas/cliente/cliente.jsp</result>
         </action>
+
         
         <action name = "actualizarCliente">
-            <result name = "success">7vistas/clientes/clientes.jsp</result>
+            <result name = "success">/vistas/clientes/clientes.jsp</result>
         </action>
         
         
-        
+        <action name = "bajaCliente" class = "controlador.BajaClienteAction">
+            <result name="success">/vistas/cliente/bajaCliente.jsp</result>
+        </action>
+
         
 
     </package>
