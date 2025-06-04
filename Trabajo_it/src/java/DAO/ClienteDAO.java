@@ -28,5 +28,14 @@ public class ClienteDAO {
         tx.commit();
         return cli;
     }
+
+    public void altaCliente(Cliente cli) {
+        
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.save(cli);
+        tx.commit();
+        
+    }
     
 }

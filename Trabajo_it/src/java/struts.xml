@@ -17,14 +17,31 @@
 
         
         <action name = "actualizarCliente">
-            <result name = "success">/vistas/clientes/clientes.jsp</result>
+            <result name = "success">vistas/cliente/clientes.jsp</result>
         </action>
         
         
         <action name = "bajaCliente" class = "controlador.BajaClienteAction">
             <result name="success">/vistas/cliente/bajaCliente.jsp</result>
         </action>
-
+        
+        <action name= "registrarseForm">
+            <result>/vistas/registrarseForm.jsp</result>
+        </action>
+        
+        <action name="volverInicio">
+            <result>/vistas/bienvenida.jsp</result>
+        </action> 
+        
+        <action name="elegirRegistro"  class = "controlador.IniciarSesionAction" method="elegirRegistro">
+            <result name="altaMecanico">/vistas/mecanico/altaMecanico.jsp</result>
+            <result name="altaCliente">/vistas/cliente/altaCliente.jsp</result>
+            <result name="error">/registrarseForm.jsp</result>
+        </action>
+        
+        <action name = "registroCliente" class = "controlador.RegistroClienteAction">
+            <result name = "success">/vistas/iniciarSesionForm.jsp</result>
+        </action>
         
 
     </package>
