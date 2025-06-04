@@ -23,14 +23,12 @@ public class Cita  implements java.io.Serializable {
     }
 
 	
-    public Cita(int idCita, Mecanico mecanico, Vehiculo vehiculo, Date fecha) {
-        this.idCita = idCita;
+    public Cita( Mecanico mecanico, Vehiculo vehiculo, Date fecha) {
         this.mecanico = mecanico;
         this.vehiculo = vehiculo;
         this.fecha = fecha;
     }
-    public Cita(int idCita, Mecanico mecanico, Vehiculo vehiculo, Date fecha, Set facturas, Set reparacions) {
-       this.idCita = idCita;
+    public Cita( Mecanico mecanico, Vehiculo vehiculo, Date fecha, Set facturas, Set reparacions) {
        this.mecanico = mecanico;
        this.vehiculo = vehiculo;
        this.fecha = fecha;

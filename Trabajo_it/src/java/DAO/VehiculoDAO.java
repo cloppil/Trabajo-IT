@@ -5,6 +5,7 @@
  */
 package DAO;
 
+import java.util.List;
 import modelo.HibernateUtil;
 import modelo.Vehiculo;
 import org.hibernate.Query;
@@ -36,6 +37,15 @@ public class VehiculoDAO {
         Vehiculo v = (Vehiculo) q.uniqueResult();
         tx.commit();
         return v;
+    }
+
+    public List<Vehiculo> obtenerVehiculos() {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("From Vehiculo ");
+        List listaVehiculos = (List<Vehiculo>) q.list();
+        tx.commit();
+        return listaVehiculos;
     }
 
 

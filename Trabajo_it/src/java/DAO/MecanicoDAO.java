@@ -5,8 +5,10 @@
  */
 package DAO;
 
+import java.util.List;
 import modelo.HibernateUtil;
 import modelo.Mecanico;
+import modelo.Vehiculo;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -34,5 +36,25 @@ public class MecanicoDAO {
         session.delete(m);
         tx.commit();
     }
+
+    public List<Mecanico> obtenerMecanicos() {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("From Mecanico ");
+        List listaMecanicos = (List<Mecanico>) q.list();
+        tx.commit();
+        return listaMecanicos;
+    }
+
+    public Mecanico obtenerMecanicoPorDNI(String mecanicoSeleccionado) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("From Mecanico where dniMecanico = '" + mecanicoSeleccionado+"'");
+        Mecanico m = (Mecanico) q.uniqueResult();
+        tx.commit();
+        return m;
+    }
+
+   
     
 }
