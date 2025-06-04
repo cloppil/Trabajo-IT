@@ -124,6 +124,14 @@
         <action name = "solicitarCita" class = "controlador.SolicitarCitaAction">
             <result name ="success">/vistas/cliente/cliente.jsp</result>
         </action>
-
+        
+        <action name = "irCancelarCita" class = "controlador.IrCancelarCitaAction">
+            <result name="success">/vistas/cita/cancelarCita.jsp</result>
+        </action>
+        
+        <action name = "cancelarCita" class = "controlador.CancelarCitaAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
     </package>
 </struts>

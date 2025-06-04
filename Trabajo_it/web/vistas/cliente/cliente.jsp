@@ -84,7 +84,7 @@
                             <s:form action="irSolicitarCita">
                                 <button type="submit" class="btn btn-outline-warning">Solicitar Cita</button>
                             </s:form>
-                            <s:form action="">
+                            <s:form action="irCancelarCita">
                                 <button type="submit" class="btn btn-outline-warning">Cancelar Cita</button>
                             </s:form>
                             <s:form action="">
