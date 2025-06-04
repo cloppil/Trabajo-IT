@@ -15,6 +15,12 @@
             <result name="cliente">/vistas/cliente/cliente.jsp</result>
         </action>
         
+        <action name = "actualizarCliente">
+            <result name = "success">7vistas/clientes/clientes.jsp</result>
+        </action>
+        
+        
+        
         
 
     </package>
