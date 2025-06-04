@@ -5,9 +5,16 @@
  */
 package DAO;
 
+import java.util.List;
+import modelo.Cita;
 import modelo.Cliente;
+import modelo.Factura;
 import modelo.HibernateUtil;
+import modelo.Historial;
 import modelo.Mecanico;
+import modelo.Piezas;
+import modelo.Reparacion;
+import modelo.Vehiculo;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -36,15 +43,78 @@ public class ClienteDAO {
         session.save(cli);
         tx.commit();
     }
-        
 
-    
+    public void bajaPropietario(Cliente cliente) {
+    Session session = HibernateUtil.getSessionFactory().openSession();
+    Transaction tx = null;
 
-    public void bajaPropietario(Cliente c) {
-        session = HibernateUtil.getSessionFactory().getCurrentSession();
-        Transaction tx = session.beginTransaction();
-        session.delete(c);
+    try {
+        tx = session.beginTransaction();
+
+        if (cliente != null) {
+            Query vehiculosQuery = session.createQuery("FROM Vehiculo WHERE cliente = :cliente");
+            vehiculosQuery.setParameter("cliente", cliente);
+            List<Vehiculo> vehiculos = vehiculosQuery.list();
+
+            for (Vehiculo vehiculo : vehiculos) {
+                for (Object citaObj : vehiculo.getCitas()) {
+                    Cita cita = (Cita) citaObj;
+
+                    // 1. Obtener reparaciones asociadas a la cita
+                    Query reparacionesQuery = session.createQuery("FROM Reparacion WHERE cita = :cita");
+                    reparacionesQuery.setParameter("cita", cita);
+                    List<Reparacion> reparaciones = reparacionesQuery.list();
+
+                    for (Reparacion reparacion : reparaciones) {
+                        // 1.1 Eliminar piezas asociadas a la reparación
+                        Query piezasQuery = session.createQuery("FROM Piezas WHERE reparacion = :reparacion");
+                        piezasQuery.setParameter("reparacion", reparacion);
+                        List<Piezas> piezas = piezasQuery.list();
+                        for (Piezas pieza : piezas) {
+                            session.delete(pieza);
+                        }
+
+                        // 1.2 Eliminar la reparación
+                        session.delete(reparacion);
+                    }
+
+                    // 2. Eliminar facturas asociadas
+                    Query facturasQuery = session.createQuery("FROM Factura WHERE cita = :cita");
+                    facturasQuery.setParameter("cita", cita);
+                    List<Factura> facturas = facturasQuery.list();
+                    for (Factura factura : facturas) {
+                        session.delete(factura);
+                    }
+
+                    // 3. Eliminar la cita
+                    session.delete(cita);
+                }
+
+                // 4. Eliminar historial
+                for (Object h : vehiculo.getHistorials()) {
+                    Historial historial = (Historial) h;
+                    session.delete(historial);
+                }
+
+                // 5. Eliminar el vehículo
+                session.delete(vehiculo);
+            }
+
+            // 6. Eliminar el cliente
+            session.delete(cliente);
+        }
+
         tx.commit();
+    } catch (Exception e) {
+        if (tx != null) {
+            tx.rollback();
+        }
+        e.printStackTrace();
+        throw e;
+    } finally {
+        session.close();
     }
+}
+
 
 }
