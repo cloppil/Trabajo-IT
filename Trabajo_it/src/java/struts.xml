@@ -74,7 +74,8 @@
         
         <action name = "irActualizarVehiculo">
             <result>/vistas/vehiculo/actualizarVehiculo.jsp</result>
-        </action>       
+        </action>  
+             
         <action name = "irActualizarVehiculoSeleccionado" class="controlador.IrActualizarVehiculoSeleccionadoAction">
             <result name="success">/vistas/vehiculo/actualizarVehiculoSeleccionado.jsp</result>
         </action> 
@@ -131,6 +132,14 @@
         
         <action name = "cancelarCita" class = "controlador.CancelarCitaAction">
             <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
+        <action name = "irMostrarCitas" class = "controlador.IrMostrarCitasAction">
+            <result name="success">/vistas/cita/mostrarCita.jsp</result>
+        </action>
+        
+        <action name = "irConsultarHistorial" class = "controlador.IrConsultarHistorialAction">
+            <result name="success">/vistas/cita/consultarHistorialCita.jsp</result>
         </action>
         
     </package>

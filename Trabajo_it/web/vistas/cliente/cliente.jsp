@@ -66,7 +66,7 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-success text-white text-center">Historial y Facturas</div>
                         <div class="card-body d-grid gap-2">
-                            <s:form action="">
+                            <s:form action="irConsultarHistorial">
                                 <button type="submit" class="btn btn-outline-success">Consultar Historial</button>
                             </s:form>
                             <s:form action="">
@@ -90,8 +90,8 @@
                             <s:form action="">
                                 <button type="submit" class="btn btn-outline-warning">Actualizar Cita</button>
                             </s:form>
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning">Mostrar Citas</button>
+                            <s:form action="irMostrarCitas">
+                                <button type="submit" class="btn btn-outline-warning">Mostrar Citas Pendientes</button>
                             </s:form>
                         </div>
                     </div>
