@@ -28,5 +28,12 @@ public class ClienteDAO {
         tx.commit();
         return cli;
     }
+
+    public void bajaPropietario(Cliente c) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.delete(c);
+        tx.commit();
+    }
     
 }
