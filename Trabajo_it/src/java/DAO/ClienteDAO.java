@@ -17,20 +17,17 @@ import org.hibernate.Transaction;
  * @author ferna
  */
 public class ClienteDAO {
-    
+
     Session session = null;
 
     public Cliente loginCliente(String dni, String password) {
-        session=HibernateUtil.getSessionFactory().getCurrentSession();
-        Transaction tx=session.beginTransaction();
-        Query q=session.createQuery("From Cliente where dniCliente='"+dni+"' and contrasenia='"+password+"'");
-        Cliente cli = (Cliente)q.uniqueResult();
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("From Cliente where dniCliente='" + dni + "' and contrasenia='" + password + "'");
+        Cliente cli = (Cliente) q.uniqueResult();
         tx.commit();
         return cli;
     }
-    
-<<<<<<< Updated upstream
-=======
 
     public void bajaPropietario(Cliente c) {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -38,14 +35,12 @@ public class ClienteDAO {
         session.delete(c);
         tx.commit();
     }
-    
+
     public void actualizarCliente(Cliente cli) {
-    session = HibernateUtil.getSessionFactory().getCurrentSession();
-    Transaction tx = session.beginTransaction();
-    session.update(cli);
-    tx.commit();
-}
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.update(cli);
+        tx.commit();
+    }
 
-
->>>>>>> Stashed changes
 }
