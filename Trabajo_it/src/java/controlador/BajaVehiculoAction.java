@@ -7,11 +7,11 @@ package controlador;
 
 import DAO.VehiculoDAO;
 import com.opensymphony.xwork2.ActionSupport;
+import modelo.Vehiculo;
 
 public class BajaVehiculoAction extends ActionSupport {
 
     private String matricula;
-    private VehiculoDAO vehiculoDAO = new VehiculoDAO();
 
     // Setter para recibir el parámetro desde la vista
     public void setMatricula(String matricula) {
@@ -25,17 +25,9 @@ public class BajaVehiculoAction extends ActionSupport {
 
     @Override
     public String execute() {
-        try {
-            if (matricula == null || matricula.trim().isEmpty()) {
-                addActionError("La matrícula es obligatoria");
-                return ERROR;
-            }
-            vehiculoDAO.bajaVehiculo(matricula);
-            addActionMessage("Vehículo dado de baja correctamente");
-            return SUCCESS;
-        } catch (Exception e) {
-            addActionError("Error al eliminar vehículo: " + e.getMessage());
-            return ERROR;
-        }
+     VehiculoDAO vehiculoDao = new VehiculoDAO();
+     Vehiculo v = vehiculoDao.obtnerVehiculoPorMatricula(this.getMatricula());
+     vehiculoDao.bajaVehiculo(v);
+     return SUCCESS;
+     }
     }
-}

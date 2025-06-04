@@ -13,6 +13,7 @@
         <action name = "iniciarSesion" class = "controlador.IniciarSesionAction">
             <result name="mecanico">/vistas/mecanico/mecanico.jsp</result>
             <result name="cliente">/vistas/cliente/cliente.jsp</result>
+            <result name="error">/vistas/bienvenida.jsp</result>
         </action>
 
         <action name = "actualizarCliente" class = "controlador.ActualizarClienteAction">

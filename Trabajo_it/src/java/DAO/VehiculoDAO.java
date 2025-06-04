@@ -7,6 +7,7 @@ package DAO;
 
 import modelo.HibernateUtil;
 import modelo.Vehiculo;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -21,16 +22,20 @@ public class VehiculoDAO {
         tx.commit();
     }
 
-    public void bajaVehiculo(String matricula) {
+    public void bajaVehiculo(Vehiculo v) {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
-
-        Vehiculo vehiculo = (Vehiculo) session.get(Vehiculo.class, matricula);
-        if (vehiculo != null) {
-            session.delete(vehiculo);
-        }
-
+        session.delete(v);
         tx.commit();
+    }
+
+    public Vehiculo obtnerVehiculoPorMatricula(String matricula) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("From Vehiculo where matricula = '" + matricula+"'");
+        Vehiculo v = (Vehiculo) q.uniqueResult();
+        tx.commit();
+        return v;
     }
 
 
