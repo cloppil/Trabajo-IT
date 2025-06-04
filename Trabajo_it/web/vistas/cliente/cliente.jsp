@@ -81,7 +81,7 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-warning text-dark text-center">Gestión de Citas</div>
                         <div class="card-body d-grid gap-2">
-                            <s:form action="">
+                            <s:form action="irSolicitarCita">
                                 <button type="submit" class="btn btn-outline-warning">Solicitar Cita</button>
                             </s:form>
                             <s:form action="">

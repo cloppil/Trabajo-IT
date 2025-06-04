@@ -117,6 +117,13 @@
         </action>
 
 
+        <action name = "irSolicitarCita" class = "controlador.IrSolicitarCitaAction">
+            <result name ="success">/vistas/cita/solicitarCita.jsp</result>
+        </action>
         
+        <action name = "solicitarCita" class = "controlador.SolicitarCitaAction">
+            <result name ="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+
     </package>
 </struts>
