@@ -73,5 +73,14 @@
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
         
+        <action name = "irConsultarCliente">
+            <result>/vistas/cliente/consultarCliente.jsp</result>
+        </action>
+        
+        
+        <action name = "consultarCliente" class="controlador.ConsultarClienteAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
     </package>
 </struts>

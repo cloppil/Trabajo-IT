@@ -70,7 +70,7 @@
                             <s:form action="irActualizarCliente">
                                 <button type="submit" class="btn btn-primary btn-block">Actualizar Mis Datos</button>
                             </s:form>
-                            <s:form action="">
+                            <s:form action="irConsultarCliente">
                                 <button type="submit" class="btn btn-primary btn-block">Consultar Mis Datos</button>
                             </s:form>
                         </div>
