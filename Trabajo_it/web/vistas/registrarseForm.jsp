@@ -9,23 +9,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
         <title>Registro</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="<s:url value='/css/bootstrap.min.css' />" rel="stylesheet">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+        <!-- Estilos personalizados -->
+        <link href="${pageContext.request.contextPath}/css/estilosRegistro.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="registro-body">
 
-        <h1>Bienvenido a nuestro taller!</h1>
+        <div class="registro-container text-center">
+            <h1 class="mb-3 text-primary">¡Bienvenido a nuestro taller!</h1>
+            <h4 class="mb-4">¿Cómo te quieres registrar?</h4>
 
-        <h2>¿Como te quieres registrar?</h2>
+            <s:form action="elegirRegistro" method="post">
+                <div class="mb-3 d-flex flex-column align-items-center">
+                    <label for="rolUsuario" class="form-label w-100 text-center">Selecciona un rol:</label>
+                    <s:select name="rolUsuario" list="{'mecanico', 'cliente'}" cssClass="form-select w-75 text-center" id="rolUsuario"/>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <s:submit value="Aceptar" name="aceptar" cssClass="btn btn-success w-75"/>
+                </div>
+            </s:form>
 
-        <s:form action="elegirRegistro" method="post" >
-            <s:radio label="Mecanico / Cliente" name="rolUsuario" list="{'mecanico', 'cliente'}"/>
-            <s:submit value="Aceptar" name="aceptar"></s:submit>
-        </s:form>
-        <a href="<s:url action='volverInicio'/>" class="btnModificado btn mt-5">
-            <s:text name="Volver" />
-        </a> 
+            <div class="mt-4">
+                <a href="<s:url action='volverInicio'/>" class="btn btn-outline-secondary w-100">
+                    <s:text name="Volver" />
+                </a>
+            </div>
+        </div>
 
     </body>
 </html>
-

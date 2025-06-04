@@ -8,32 +8,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login</title>
+        <meta charset="UTF-8">
+        <title>Iniciar Sesión</title>
         <s:head/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/estilosLogin.css" rel="stylesheet">
     </head>
-        <body>
+    <body class="login-body d-flex align-items-center justify-content-center">
 
-        <div class="container-fluid text-center" style="height: 79vh;">
-            <div class="row h-100 justify-content-center">
-                <main class="form-signin col-lg-3 col-md-6 col-12 align-self-center">
-                    <s:form action="iniciarSesion" method="post" theme="simple">
-                        <h1 class="h3 mb-3 fw-normal">Introduce tus datos</h1>
-                        <div class="form-floating">
-                            <s:textfield name="dni" id="floatingInput" cssClass="form-control" placeholder="67534287B"/>
-                                <label for="floatingInput">DNI</label>
-                            </div>
-                            <div class="form-floating">
-                            <s:password name="password" placeholder="Contraseña" cssClass="form-control"></s:password>
-                                <label for="floatingInput">Contraseña</label>
-                            </div>
-                        <s:submit value="Ingresar" name="btnLogin" cssClass="btnModificado w-100 btn mt-3"></s:submit>
-                        <s:fielderror cssClass="pt-3"></s:fielderror>
-                    </s:form>
-                        <p class="pt-2">No tienes cuenta? <a class="link-dark" href="<s:url action="registrarForm"/>">Registrarse</a></p>
-                </main>
+        <div class="login-container text-center">
+            <main class="form-signin w-100 m-auto">
+                <s:form action="iniciarSesion" method="post" theme="simple">
+                    <h1 class="h3 mb-4 fw-bold text-primary">Inicia sesión</h1>
 
-            </div>
+                    <div class="form-floating mb-3">
+                        <s:textfield name="dni" id="dni" cssClass="form-control" placeholder="67534287B"/>
+                        <label for="dni">DNI</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <s:password name="password" id="password" placeholder="Contraseña" cssClass="form-control"/>
+                        <label for="password">Contraseña</label>
+                    </div>
+
+                    <s:submit value="Ingresar" name="btnLogin" cssClass="btn btn-primary w-100 py-2"/>
+                    <s:fielderror cssClass="text-danger mt-3"/>
+                </s:form>
+
+                <p class="mt-3">¿No tienes cuenta? 
+                    <a class="link-primary" href="<s:url action='registrarForm'/>">Regístrate aquí</a>
+                </p>
+            </main>
         </div>
+
     </body>
 </html>

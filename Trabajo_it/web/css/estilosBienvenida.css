@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-jun-2025, 16:07:35
+    Author     : ferna
+*/
+body.bienvenida-body {
+    background: linear-gradient(to right, #eef2f3, #cfd9df);
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.bienvenida-card {
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.logo-img {
+    max-height: 200px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación opcional suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
