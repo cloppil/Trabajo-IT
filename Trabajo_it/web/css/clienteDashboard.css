@@ -1,0 +1,35 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.welcome-box {
+    background-color: #eaf6ff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    font-size: 1.2em;
+    font-weight: 600;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+}
+
+.btn {
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 4px 0;
+}
