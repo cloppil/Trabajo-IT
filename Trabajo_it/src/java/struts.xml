@@ -17,13 +17,7 @@
 
         <action name = "actualizarCliente" class = "controlador.ActualizarClienteAction">
             <result name = "success">/vistas/cliente/clientes.jsp</result>
-
         </action>
-        
-        <action name = "irBajaCliente" class = "controlador.IrBajaClienteAction">
-            <result name="success">/vistas/cliente/bajaCliente.jsp</result>
-        </action>
-
         
         <action name= "registrarseForm">
             <result>/vistas/registrarseForm.jsp</result>
@@ -51,6 +45,10 @@
             <result>/vistas/vehiculo/altaVehiculo.jsp</result>
         </action>
         
+        <action name = "irBajaCliente">
+            <result>/vistas/cliente/bajaCliente.jsp</result>
+        </action>
+        
         <action name = "altaVehiculo" class="controlador.AltaVehiculoAction">
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
@@ -58,8 +56,7 @@
         <action name = "irBajaVehiculo">
             <result>/vistas/vehiculo/bajaVehiculo.jsp</result>
         </action>
-        
-        
+                
         <action name = "bajaVehiculo" class="controlador.BajaVehiculoAction">
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
@@ -72,6 +69,11 @@
         <action name = "actualizarCliente" class="controlador.ActualizarClienteAction">
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
+        
+        <action name = "irActualizarVehiculo">
+            <result>/vistas/vehiculo/actualizarVehiculo.jsp</result>
+        </action>
+        
         
     </package>
 </struts>
