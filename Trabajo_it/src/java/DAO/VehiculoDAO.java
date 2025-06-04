@@ -12,7 +12,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 public class VehiculoDAO {
-    
+
     Session session = null;
 
     public void altaVehiculo(Vehiculo vehiculo) {
@@ -32,11 +32,21 @@ public class VehiculoDAO {
     public Vehiculo obtnerVehiculoPorMatricula(String matricula) {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
-        Query q = session.createQuery("From Vehiculo where matricula = '" + matricula+"'");
+        Query q = session.createQuery("From Vehiculo where matricula = '" + matricula + "'");
         Vehiculo v = (Vehiculo) q.uniqueResult();
         tx.commit();
         return v;
     }
 
+    public void actualizarVehiculo(Vehiculo vehiculo) {
+        Transaction tx = null;
+
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        tx = session.beginTransaction();
+
+        session.update(vehiculo);
+
+        tx.commit();
+    }
 
 }

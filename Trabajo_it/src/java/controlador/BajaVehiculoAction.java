@@ -25,9 +25,9 @@ public class BajaVehiculoAction extends ActionSupport {
 
     @Override
     public String execute() {
-     VehiculoDAO vehiculoDao = new VehiculoDAO();
-     Vehiculo v = vehiculoDao.obtnerVehiculoPorMatricula(this.getMatricula());
-     vehiculoDao.bajaVehiculo(v);
-     return SUCCESS;
-     }
+        VehiculoDAO vehiculoDao = new VehiculoDAO();
+        Vehiculo v = vehiculoDao.obtnerVehiculoPorMatricula(this.getMatricula());
+        vehiculoDao.bajaVehiculo(v);
+        return SUCCESS;
     }
+}

@@ -62,19 +62,25 @@
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
         
-        
-        <action name = "irActualizarCliente" class="controlador.IrActualizarClienteAction">
-            <result name="success">/vistas/cliente/actualizarCliente.jsp</result>
-        </action>
-        
         <action name = "actualizarCliente" class="controlador.ActualizarClienteAction">
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
         
         <action name = "irActualizarVehiculo">
             <result>/vistas/vehiculo/actualizarVehiculo.jsp</result>
-        </action>
+        </action>       
+        <action name = "irActualizarVehiculoSeleccionado" class="controlador.IrActualizarVehiculoSeleccionadoAction">
+            <result name="success">/vistas/vehiculo/actualizarVehiculoSeleccionado.jsp</result>
+        </action> 
         
+        <action name = "cambiarVehiculo" class="controlador.CambiarVehiculoAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>     
+        
+        <action name = "registroMecanico" class="controlador.RegistroMecanicoAction" >
+            <result name = "success">/vistas/iniciarSesionForm.jsp</result>
+        </action>
+
         
     </package>
 </struts>
