@@ -254,5 +254,9 @@
             <result name="success">/vistas/mecanico/mecanico.jsp</result>
         </action>
 
+        <action name = "irVerReparaciones" class="controlador.VerReparacionesAction">
+            <result name="success">/vistas/reparacion/verReparaciones.jsp</result>
+        </action>
+
     </package>
 </struts>

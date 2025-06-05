@@ -35,4 +35,13 @@ public class ReparacionDAO {
         tx.commit();
     }
 
+    public List<Reparacion> listarReparacionesPorMecanico(String dniMecanico) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("From Reparacion r where r.cita.mecanico.dniMecanico = '"+dniMecanico+"'");
+        List listaReparaciones = (List<Reparacion>) q.list();
+        tx.commit();
+        return listaReparaciones;
+    }
+
 }

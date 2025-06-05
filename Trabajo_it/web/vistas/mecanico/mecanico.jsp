@@ -49,13 +49,7 @@
                             <s:form action="irAltaReparacion">
                                 <button type="submit" class="btn btn-outline-info btn-block">Alta Reparación</button>
                             </s:form>
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-info btn-block">Eliminar Reparación</button>
-                            </s:form>
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-info btn-block">Modificar Reparación</button>
-                            </s:form>
-                            <s:form action="">
+                            <s:form action="irVerReparaciones">
                                 <button type="submit" class="btn btn-outline-info btn-block">Ver Reparaciones</button>
                             </s:form>
                         </div>
