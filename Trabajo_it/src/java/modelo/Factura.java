@@ -1,5 +1,5 @@
 package modelo;
-// Generated 03-jun-2025 9:41:35 by Hibernate Tools 4.3.1
+// Generated 05-jun-2025 10:06:04 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -10,34 +10,33 @@ import java.util.Date;
 public class Factura  implements java.io.Serializable {
 
 
-     private int idFactura;
-     private Cita cita;
+     private Integer idFactura;
+     private Reparacion reparacion;
      private double importeTotal;
      private Date fecha;
 
     public Factura() {
     }
 
-    public Factura(int idFactura, Cita cita, double importeTotal, Date fecha) {
-       this.idFactura = idFactura;
-       this.cita = cita;
+    public Factura(Reparacion reparacion, double importeTotal, Date fecha) {
+       this.reparacion = reparacion;
        this.importeTotal = importeTotal;
        this.fecha = fecha;
     }
    
-    public int getIdFactura() {
+    public Integer getIdFactura() {
         return this.idFactura;
     }
     
-    public void setIdFactura(int idFactura) {
+    public void setIdFactura(Integer idFactura) {
         this.idFactura = idFactura;
     }
-    public Cita getCita() {
-        return this.cita;
+    public Reparacion getReparacion() {
+        return this.reparacion;
     }
     
-    public void setCita(Cita cita) {
-        this.cita = cita;
+    public void setReparacion(Reparacion reparacion) {
+        this.reparacion = reparacion;
     }
     public double getImporteTotal() {
         return this.importeTotal;

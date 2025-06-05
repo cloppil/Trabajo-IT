@@ -10,7 +10,6 @@ import modelo.Cita;
 import modelo.Cliente;
 import modelo.Factura;
 import modelo.HibernateUtil;
-import modelo.Historial;
 import modelo.Mecanico;
 import modelo.Piezas;
 import modelo.Reparacion;

@@ -3,10 +3,10 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated 05-jun-2025 10:06:07 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="modelo.Cliente" table="cliente" catalog="taller_mecanico" optimistic-lock="version">
-        <id name="dniCliente" type="string">
-            <column name="dniCliente" length="9" />
-            <generator class="assigned" />
+    <class name="modelo.Proveedor" table="proveedor" catalog="taller_mecanico" optimistic-lock="version">
+        <id name="idProveedor" type="java.lang.Integer">
+            <column name="idProveedor" />
+            <generator class="identity" />
         </id>
         <property name="nombre" type="string">
             <column name="nombre" length="50" not-null="true" />
@@ -14,17 +14,17 @@
         <property name="email" type="string">
             <column name="email" length="50" not-null="true" />
         </property>
-        <property name="contrasenia" type="string">
-            <column name="contrasenia" length="50" not-null="true" />
+        <property name="direccion" type="string">
+            <column name="direccion" length="50" not-null="true" />
         </property>
         <property name="telefono" type="int">
             <column name="telefono" not-null="true" />
         </property>
-        <set name="vehiculos" table="vehiculo" inverse="true" lazy="true" fetch="select">
+        <set name="piezases" table="piezas" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="dniCliente" length="9" not-null="true" />
+                <column name="idProveedor" not-null="true" />
             </key>
-            <one-to-many class="modelo.Vehiculo" />
+            <one-to-many class="modelo.Piezas" />
         </set>
     </class>
 </hibernate-mapping>

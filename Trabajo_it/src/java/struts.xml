@@ -138,9 +138,6 @@
             <result name="success">/vistas/cita/mostrarCita.jsp</result>
         </action>
         
-        <action name = "irConsultarHistorial" class = "controlador.IrConsultarHistorialAction">
-            <result name="success">/vistas/cita/consultarHistorialCita.jsp</result>
-        </action>
         
     </package>
 </struts>

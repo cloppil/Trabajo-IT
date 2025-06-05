@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 03-jun-2025 9:41:36 by Hibernate Tools 4.3.1 -->
+<!-- Generated 05-jun-2025 10:06:07 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="modelo.Reparacion" table="reparacion" catalog="taller_mecanico" optimistic-lock="version">
-        <id name="idReparacion" type="int">
+        <id name="idReparacion" type="java.lang.Integer">
             <column name="idReparacion" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <many-to-one name="cita" class="modelo.Cita" fetch="select">
             <column name="idCita" not-null="true" />
@@ -20,6 +20,12 @@
         <property name="comentario" type="string">
             <column name="comentario" length="35" not-null="true" />
         </property>
+        <set name="facturas" table="factura" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idReparacion" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Factura" />
+        </set>
         <set name="piezases" table="piezas" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="idReparacion" not-null="true" />

@@ -1,5 +1,5 @@
 package modelo;
-// Generated 03-jun-2025 9:41:35 by Hibernate Tools 4.3.1
+// Generated 05-jun-2025 10:06:04 by Hibernate Tools 4.3.1
 
 
 
@@ -9,25 +9,33 @@ package modelo;
 public class Piezas  implements java.io.Serializable {
 
 
-     private int idPieza;
+     private Integer idPieza;
+     private Proveedor proveedor;
      private Reparacion reparacion;
      private String nombrePieza;
 
     public Piezas() {
     }
 
-    public Piezas(int idPieza, Reparacion reparacion, String nombrePieza) {
-       this.idPieza = idPieza;
+    public Piezas(Proveedor proveedor, Reparacion reparacion, String nombrePieza) {
+       this.proveedor = proveedor;
        this.reparacion = reparacion;
        this.nombrePieza = nombrePieza;
     }
    
-    public int getIdPieza() {
+    public Integer getIdPieza() {
         return this.idPieza;
     }
     
-    public void setIdPieza(int idPieza) {
+    public void setIdPieza(Integer idPieza) {
         this.idPieza = idPieza;
+    }
+    public Proveedor getProveedor() {
+        return this.proveedor;
+    }
+    
+    public void setProveedor(Proveedor proveedor) {
+        this.proveedor = proveedor;
     }
     public Reparacion getReparacion() {
         return this.reparacion;

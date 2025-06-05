@@ -67,9 +67,6 @@
                         <div class="card-header bg-success text-white text-center">Historial y Facturas</div>
                         <div class="card-body d-grid gap-2">
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-success">Consultar Historial</button>
-                            </s:form>
-                            <s:form action="">
                                 <button type="submit" class="btn btn-outline-success">Consultar Facturas</button>
                             </s:form>
                             <s:form action="">

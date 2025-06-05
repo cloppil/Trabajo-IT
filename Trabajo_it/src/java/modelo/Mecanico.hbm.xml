@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 03-jun-2025 9:41:36 by Hibernate Tools 4.3.1 -->
+<!-- Generated 05-jun-2025 10:06:07 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="modelo.Mecanico" table="mecanico" catalog="taller_mecanico" optimistic-lock="version">
         <id name="dniMecanico" type="string">

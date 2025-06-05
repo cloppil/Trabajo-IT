@@ -1,5 +1,5 @@
 package modelo;
-// Generated 03-jun-2025 9:41:35 by Hibernate Tools 4.3.1
+// Generated 05-jun-2025 10:06:04 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -15,7 +15,6 @@ public class Vehiculo  implements java.io.Serializable {
      private Cliente cliente;
      private String marca;
      private Set citas = new HashSet(0);
-     private Set historials = new HashSet(0);
 
     public Vehiculo() {
     }
@@ -25,12 +24,11 @@ public class Vehiculo  implements java.io.Serializable {
         this.matricula = matricula;
         this.cliente = cliente;
     }
-    public Vehiculo(String matricula, Cliente cliente, String marca, Set citas, Set historials) {
+    public Vehiculo(String matricula, Cliente cliente, String marca, Set citas) {
        this.matricula = matricula;
        this.cliente = cliente;
        this.marca = marca;
        this.citas = citas;
-       this.historials = historials;
     }
    
     public String getMatricula() {
@@ -60,13 +58,6 @@ public class Vehiculo  implements java.io.Serializable {
     
     public void setCitas(Set citas) {
         this.citas = citas;
-    }
-    public Set getHistorials() {
-        return this.historials;
-    }
-    
-    public void setHistorials(Set historials) {
-        this.historials = historials;
     }
 
 

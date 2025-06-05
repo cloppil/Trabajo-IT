@@ -49,13 +49,13 @@ Contributor(s):
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.format_sql">true</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
-    <mapping resource="modelo/Historial.hbm.xml"/>
-    <mapping resource="modelo/Reparacion.hbm.xml"/>
-    <mapping resource="modelo/Cita.hbm.xml"/>
-    <mapping resource="modelo/Piezas.hbm.xml"/>
-    <mapping resource="modelo/Cliente.hbm.xml"/>
-    <mapping resource="modelo/Factura.hbm.xml"/>
     <mapping resource="modelo/Mecanico.hbm.xml"/>
+    <mapping resource="modelo/Piezas.hbm.xml"/>
+    <mapping resource="modelo/Factura.hbm.xml"/>
+    <mapping resource="modelo/Proveedor.hbm.xml"/>
+    <mapping resource="modelo/Cliente.hbm.xml"/>
     <mapping resource="modelo/Vehiculo.hbm.xml"/>
+    <mapping resource="modelo/Cita.hbm.xml"/>
+    <mapping resource="modelo/Reparacion.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

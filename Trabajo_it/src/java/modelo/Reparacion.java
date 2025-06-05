@@ -1,5 +1,5 @@
 package modelo;
-// Generated 03-jun-2025 9:41:35 by Hibernate Tools 4.3.1
+// Generated 05-jun-2025 10:06:04 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,38 +11,38 @@ import java.util.Set;
 public class Reparacion  implements java.io.Serializable {
 
 
-     private int idReparacion;
+     private Integer idReparacion;
      private Cita cita;
      private String tipo;
      private double precio;
      private String comentario;
+     private Set facturas = new HashSet(0);
      private Set piezases = new HashSet(0);
 
     public Reparacion() {
     }
 
 	
-    public Reparacion(int idReparacion, Cita cita, String tipo, double precio, String comentario) {
-        this.idReparacion = idReparacion;
+    public Reparacion(Cita cita, String tipo, double precio, String comentario) {
         this.cita = cita;
         this.tipo = tipo;
         this.precio = precio;
         this.comentario = comentario;
     }
-    public Reparacion(int idReparacion, Cita cita, String tipo, double precio, String comentario, Set piezases) {
-       this.idReparacion = idReparacion;
+    public Reparacion(Cita cita, String tipo, double precio, String comentario, Set facturas, Set piezases) {
        this.cita = cita;
        this.tipo = tipo;
        this.precio = precio;
        this.comentario = comentario;
+       this.facturas = facturas;
        this.piezases = piezases;
     }
    
-    public int getIdReparacion() {
+    public Integer getIdReparacion() {
         return this.idReparacion;
     }
     
-    public void setIdReparacion(int idReparacion) {
+    public void setIdReparacion(Integer idReparacion) {
         this.idReparacion = idReparacion;
     }
     public Cita getCita() {
@@ -72,6 +72,13 @@ public class Reparacion  implements java.io.Serializable {
     
     public void setComentario(String comentario) {
         this.comentario = comentario;
+    }
+    public Set getFacturas() {
+        return this.facturas;
+    }
+    
+    public void setFacturas(Set facturas) {
+        this.facturas = facturas;
     }
     public Set getPiezases() {
         return this.piezases;

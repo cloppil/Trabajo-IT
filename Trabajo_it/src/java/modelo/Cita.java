@@ -1,5 +1,5 @@
 package modelo;
-// Generated 03-jun-2025 9:41:35 by Hibernate Tools 4.3.1
+// Generated 05-jun-2025 10:06:04 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -12,35 +12,33 @@ import java.util.Set;
 public class Cita  implements java.io.Serializable {
 
 
-     private int idCita;
+     private Integer idCita;
      private Mecanico mecanico;
      private Vehiculo vehiculo;
      private Date fecha;
-     private Set facturas = new HashSet(0);
      private Set reparacions = new HashSet(0);
 
     public Cita() {
     }
 
 	
-    public Cita( Mecanico mecanico, Vehiculo vehiculo, Date fecha) {
+    public Cita(Mecanico mecanico, Vehiculo vehiculo, Date fecha) {
         this.mecanico = mecanico;
         this.vehiculo = vehiculo;
         this.fecha = fecha;
     }
-    public Cita( Mecanico mecanico, Vehiculo vehiculo, Date fecha, Set facturas, Set reparacions) {
+    public Cita(Mecanico mecanico, Vehiculo vehiculo, Date fecha, Set reparacions) {
        this.mecanico = mecanico;
        this.vehiculo = vehiculo;
        this.fecha = fecha;
-       this.facturas = facturas;
        this.reparacions = reparacions;
     }
    
-    public int getIdCita() {
+    public Integer getIdCita() {
         return this.idCita;
     }
     
-    public void setIdCita(int idCita) {
+    public void setIdCita(Integer idCita) {
         this.idCita = idCita;
     }
     public Mecanico getMecanico() {
@@ -63,13 +61,6 @@ public class Cita  implements java.io.Serializable {
     
     public void setFecha(Date fecha) {
         this.fecha = fecha;
-    }
-    public Set getFacturas() {
-        return this.facturas;
-    }
-    
-    public void setFacturas(Set facturas) {
-        this.facturas = facturas;
     }
     public Set getReparacions() {
         return this.reparacions;
