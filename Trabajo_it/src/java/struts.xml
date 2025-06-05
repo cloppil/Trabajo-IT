@@ -147,6 +147,21 @@
         
         <action name = "irConsultarMecanico">
             <result>/vistas/mecanico/consultarMecanico.jsp</result>
+
+        <action name = "nuevoProveedor">
+            <result>/vistas/mecanico/nuevoProveedor.jsp</result>
+        </action>
+        
+        <action name = "registroProveedor" class="controlador.RegistroProveedorAction">
+            <result name = "success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+        
+        <action name = "irBorrarProveedor" class="controlador.IrBorrarProveedor">
+            <result name = "success">/vistas/mecanico/bajaProveedor.jsp</result>
+        </action>
+        
+        <action name = "borrarProveedor" class = "controlador.BorrarProveedorAction">
+            <result name = "success">/vistas/mecanico/mecanico.jsp</result>
         </action>
         
     </package>
