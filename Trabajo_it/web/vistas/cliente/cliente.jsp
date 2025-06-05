@@ -16,6 +16,7 @@
         <link href="<s:url value='/css/clienteDashboard.css'/>" rel="stylesheet">
     </head>
     <body class="bg-light">
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container py-5">
             <div class="text-center welcome-box mb-5">
                 <h1 class="fw-bold text-primary">Bienvenido a AutoFast <s:property value="#session.cliente.nombre"/></h1>

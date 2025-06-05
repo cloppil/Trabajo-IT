@@ -16,6 +16,7 @@
         <link href="<s:url value='/css/clienteDashboard.css'/>" rel="stylesheet">
     </head>
     <body class="bg-light">
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container py-5">
             <div class="text-center welcome-box mb-5">
                 <h1 class="fw-bold text-primary">Menú mecánico <s:property value="#session.mecanico.nombre"/></h1>
@@ -31,10 +32,10 @@
                                 <button type="submit" class="btn btn-outline-primary btn-block">Baja Mecánico</button>
                             </s:form>
                             <s:form action="irActualizarMecanico">
-                                <button type="submit" class="btn btn-outline-primary">Actualizar Mis Datos de Mecánico</button>
+                                <button type="submit" class="btn btn-outline-primary btn-block">Actualizar Mis Datos de Mecánico</button>
                             </s:form>
                             <s:form action="irConsultarMecanico">
-                                <button type="submit" class="btn btn-outline-primary">Consultar Mis Datos de Mecánico</button>
+                                <button type="submit" class="btn btn-outline-primary btn-block">Consultar Mis Datos de Mecánico</button>
                             </s:form>
                         </div>
                     </div>

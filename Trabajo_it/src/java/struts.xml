@@ -147,6 +147,7 @@
         
         <action name = "irConsultarMecanico">
             <result>/vistas/mecanico/consultarMecanico.jsp</result>
+        </action>    
 
         <action name = "nuevoProveedor">
             <result>/vistas/mecanico/nuevoProveedor.jsp</result>
@@ -162,6 +163,17 @@
         
         <action name = "borrarProveedor" class = "controlador.BorrarProveedorAction">
             <result name = "success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+        
+        <action name="volverInicioCliente">
+            <result>/vistas/cliente/cliente.jsp</result>
+        </action>
+        <action name="volverInicioMecanico">
+            <result>/vistas/cliente/mecanico.jsp</result>
+        </action>
+        
+        <action name ="logout" class="controlador.LogoutAction">
+            <result name="success">/vistas/bienvenida.jsp</result> 
         </action>
         
     </package>
