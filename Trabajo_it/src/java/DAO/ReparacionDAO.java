@@ -28,4 +28,11 @@ public class ReparacionDAO {
         return reparacion;
     }
 
+    public void crearReparacion(Reparacion r) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.save(r);
+        tx.commit();
+    }
+
 }

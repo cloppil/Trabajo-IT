@@ -62,4 +62,23 @@ public class CitaDAO {
         session.delete(c);
         tx.commit();
     }
+
+    public List<Cita> obtenerCitasMecanico(String dniMecanico) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("From Cita c where c.mecanico.dniMecanico = '" + dniMecanico + "'");
+        List listaCitas = (List<Cita>) q.list();
+        tx.commit();
+        return listaCitas;
+    }
+
+    public Cita obtenerCitasPorId(int idCita) {
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+
+        Query query = session.createQuery("FROM Cita c WHERE c.idCita="+idCita);
+        Cita c = (Cita) query.uniqueResult();
+        tx.commit();
+        return c;
+    }
 }

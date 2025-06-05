@@ -46,7 +46,7 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-info text-white text-center">Reparaciones</div>
                         <div class="card-body d-grid gap-2">
-                            <s:form action="">
+                            <s:form action="irAltaReparacion">
                                 <button type="submit" class="btn btn-outline-info btn-block">Alta Reparación</button>
                             </s:form>
                             <s:form action="">

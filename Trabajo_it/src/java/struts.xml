@@ -226,5 +226,14 @@
         <action name = "consultarFacturasCliente" class="controlador.ConsultarFacturasClienteAction">
             <result name = "success">/vistas/cliente/mostrarFacturas.jsp</result>
         </action>
+        
+        <action name = "irAltaReparacion" class="controlador.IrAltaReparaciónAction">
+            <result name="success">/vistas/reparacion/nuevaReparacion.jsp</result>
+        </action>
+        
+        <action name = "nuevaReparacion" class="controlador.NuevaReparacionAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+        
     </package>
 </struts>
