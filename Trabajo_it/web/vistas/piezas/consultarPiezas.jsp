@@ -52,10 +52,6 @@
             <s:else>
                 <div class="alert alert-warning text-center">No hay piezas registradas.</div>
             </s:else>
-
-            <s:form action="menuPrincipal" method="get">
-                <s:submit value="Volver al Menú" cssClass="btn btn-secondary"/>
-            </s:form>
         </div>
 
         <script src="<s:url value='/js/bootstrap.bundle.min.js'/>" defer></script>
