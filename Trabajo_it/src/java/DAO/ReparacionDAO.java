@@ -21,7 +21,7 @@ public class ReparacionDAO {
     }
 
     public Reparacion obtenerPorId(int id) {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         Reparacion reparacion = (Reparacion) session.get(Reparacion.class, id);
         tx.commit();
@@ -42,6 +42,13 @@ public class ReparacionDAO {
         List listaReparaciones = (List<Reparacion>) q.list();
         tx.commit();
         return listaReparaciones;
+    }
+
+    public void eliminarReparacion(Reparacion r) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.delete(r);
+        tx.commit();
     }
 
 }

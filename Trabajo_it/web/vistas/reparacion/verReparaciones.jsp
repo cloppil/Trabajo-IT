@@ -33,12 +33,13 @@
                                 <td><s:property value="%{#reparacion.tipo}"/></td>
                                 <td><s:property value="%{#reparacion.precio}"/></td>
                                 <td><s:property value="%{#reparacion.comentario}"/></td>
+                                <td><s:form action="eliminarReparacion">
+                                        <s:submit value="Eliminar"/>
+                                        <s:hidden name="idReparacion" value="%{#reparacion.idReparacion}"/>
+                                    </s:form></td>
                                 <td><s:form action="">
-                                <button type="submit" class="btn btn-outline-info btn-block">Eliminar Reparación</button>
-                            </s:form></td>
-                                <td><s:form action="">
-                                <button type="submit" class="btn btn-outline-info btn-block">Modificar Reparación</button>
-                            </s:form></td>
+                                        <button type="submit" class="btn btn-outline-info btn-block">Modificar Reparación</button>
+                                    </s:form></td>
                             </tr>
                         </s:iterator>
                     </tbody>
