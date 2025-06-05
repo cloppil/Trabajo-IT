@@ -71,6 +71,7 @@
                             </s:form>
                             <s:form action="">
                                 <button type="submit" class="btn btn-outline-success btn-block">Modificar Facturas</button>
+                                <button type="submit" class="btn btn-outline-success">Modificar Facturas</button>
                             </s:form>
                         </div>
                     </div>
@@ -81,17 +82,17 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-warning text-dark text-center">Gestión de piezas</div>
                         <div class="card-body d-grid gap-2">
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning btn-block">Solicitar Pieza</button>
+                            <s:form action="irSolicitarPieza">
+                                <button type="submit" class="btn btn-outline-warning">Solicitar Pieza</button>
                             </s:form>
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning btn-block">Devolver Pieza</button>
+                            <s:form action="irDevolverPieza">
+                                <button type="submit" class="btn btn-outline-warning">Devolver Pieza</button>
                             </s:form>
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning btn-block">Modificar Pieza</button>
+                            <s:form action="irModificarPieza">
+                                <button type="submit" class="btn btn-outline-warning">Modificar Pieza</button>
                             </s:form>
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning btn-block">Mostrar Piezas disponibles</button>
+                            <s:form action="irConsultarPiezas">
+                                <button type="submit" class="btn btn-outline-warning">Mostrar Piezas disponibles</button>
                             </s:form>
                         </div>
                     </div>
