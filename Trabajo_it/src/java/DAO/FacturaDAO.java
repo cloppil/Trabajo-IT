@@ -16,9 +16,9 @@ import org.hibernate.Transaction;
  * @author luisc
  */
 public class FacturaDAO {
-
+    Session session = null;
     public List<Factura> obtenerFacturasPorIdMecanico(String idMecanico) {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
 
         List<Factura> listaFacturas = session.createQuery(
@@ -32,7 +32,7 @@ public class FacturaDAO {
     }
 
     public Factura obtenerFacturaPorId(int idFactura) {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
 
         Factura factura = (Factura) session.createQuery(
@@ -46,11 +46,18 @@ public class FacturaDAO {
     }
 
     public void actualizarFactura(Factura factura) {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
 
         session.update(factura);
 
+        tx.commit();
+    }
+
+    public void registrarFactura(Factura f) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.save(f);
         tx.commit();
     }
 

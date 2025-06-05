@@ -6,6 +6,7 @@
 package controlador;
 
 import DAO.CitaDAO;
+import DAO.FacturaDAO;
 import DAO.ReparacionDAO;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import java.util.Date;
@@ -36,6 +37,8 @@ public class NuevaReparacionAction {
         rDAO.crearReparacion(r);
         Date fechaFactura = new Date();
         Factura f = new Factura(r,precio,fechaFactura);
+        FacturaDAO fDAO = new FacturaDAO();
+        fDAO.registrarFactura(f);
         
         return SUCCESS;
     }
