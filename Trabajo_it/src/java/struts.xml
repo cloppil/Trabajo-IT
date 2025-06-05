@@ -139,5 +139,42 @@
         </action>
         
         
+        <action name = "irSolicitarPieza" class = "controlador.IrSolicitarPiezaAction">
+            <result name ="success">/vistas/piezas/solicitarPieza.jsp</result>
+        </action>
+        
+        <action name = "solicitarPieza" class = "controlador.SolicitarPiezaAction">
+            <result name ="success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+        
+        
+        <action name = "irDevolverPieza">
+            <result>/vistas/piezas/devolverPieza.jsp</result>
+        </action>
+                
+        <action name = "devolverPieza" class="controlador.DevolverPiezaAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+        
+        
+        <action name = "irModificarPieza">
+            <result>/vistas/piezas/modificarPieza.jsp</result>
+        </action>  
+             
+        <action name = "irModificarPiezaSeleccionada" class="controlador.IrModificarPiezaSeleccionadaAction">
+            <result name="success">/vistas/piezas/modificarPiezaSeleccionada.jsp</result>
+        </action>
+        
+         <action name = "modificarPieza" class="controlador.ModificarPiezaAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
+        </action> 
+        
+        <action name = "irConsultarPiezas" class="controlador.IrConsultarPiezasAction">
+            <result name="success">/vistas/piezas/consultarPiezas.jsp</result>
+        </action>
+        
+        <action name = "consultarPiezas" class="controlador.ConsultarPiezasAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
     </package>
 </struts>
