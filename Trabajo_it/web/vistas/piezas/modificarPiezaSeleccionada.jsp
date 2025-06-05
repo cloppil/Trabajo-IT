@@ -8,6 +8,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa;">
+        <jsp:include page="/vistas/header.jsp" />
 
         <div class="container" style="max-width: 500px;">
             <h2 class="text-center mb-4">Modificar Pieza</h2>

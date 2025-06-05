@@ -20,6 +20,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container">
             <h1>Eliminar Proveedor</h1>
             <s:form action="borrarProveedor" method="post">

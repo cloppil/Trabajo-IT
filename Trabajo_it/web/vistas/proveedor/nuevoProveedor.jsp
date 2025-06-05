@@ -14,7 +14,7 @@
         <s:head/>
     </head>
     <body>
-
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container-fluid text-center" style="height: 79vh;">
             <div class="row h-100 justify-content-center">
                 <main class="form-signin col-lg-3 col-md-6 col-12 align-self-center">

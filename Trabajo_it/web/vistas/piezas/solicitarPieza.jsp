@@ -6,7 +6,7 @@
     <title>Solicitar Nueva Pieza</title>
 </head>
 <body>
-
+    <jsp:include page="/vistas/header.jsp" />
     <h2>Solicitar Nueva Pieza</h2>
 
     <s:form action="solicitarPieza" method="post">

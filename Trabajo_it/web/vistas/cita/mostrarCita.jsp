@@ -6,30 +6,9 @@
         <meta charset="UTF-8">
         <title>Mostrar Citas Pendientes</title>
         <link href="<s:url value='/css/bootstrap.min.css' />" rel="stylesheet">
-        <style>
-            body {
-                background-color: #f8f9fa;
-            }
-            .table-container {
-                margin-top: 50px;
-            }
-            .custom-table thead {
-                background-color: #007bff;
-                color: white;
-            }
-            .custom-table tbody tr:hover {
-                background-color: #f1f1f1;
-            }
-            .btn-sm {
-                padding: 0.25rem 0.5rem;
-                font-size: 0.875rem;
-            }
-            form {
-                margin: 0;
-            }
-        </style>
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container text-center table-container">
             <h2 class="mb-4">Citas pendientes de <strong><s:property value="#session.cliente.nombre"/></strong></h2>
 

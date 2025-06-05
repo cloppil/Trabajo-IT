@@ -13,6 +13,7 @@
         <title>Citas</title>
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <h1>Cancele la cita que desee</h1>
         <table border="1" cellspacing="1" cellspadding="2">
             <tr>

@@ -15,11 +15,12 @@
         
     </head>
     <body>
-
+        <jsp:include page="/vistas/header.jsp" />
         <main class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
             <div class="card shadow-lg rounded-4 p-4 solicitar-cita-card">
                 <div class="card-header text-white text-center rounded-top-4 bg-primary py-3">
                     <span class="emoji fs-3 me-2">💌</span> Solicita tu Cita
+
                 </div>
                 <div class="card-body">
                     <s:form action="solicitarCita" method="post" cssClass="needs-validation" novalidate="true">

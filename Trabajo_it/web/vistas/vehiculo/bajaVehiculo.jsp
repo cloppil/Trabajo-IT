@@ -12,6 +12,7 @@
         <title>Baja de Vehículo</title>
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <h2>Baja de Vehículo</h2>
 
         <s:form action="bajaVehiculo" method="post">
