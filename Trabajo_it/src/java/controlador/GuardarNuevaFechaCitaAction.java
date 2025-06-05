@@ -29,7 +29,7 @@ public class GuardarNuevaFechaCitaAction extends ActionSupport implements Sessio
             }
         }
 
-        // Aquí podrías guardar en la BBDD si lo necesitas
+        
         return SUCCESS;
     }
 

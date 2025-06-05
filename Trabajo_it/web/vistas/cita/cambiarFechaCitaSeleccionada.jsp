@@ -22,8 +22,8 @@
 
                         <!-- Campo de fecha -->
                         <div class="mb-3">
-                            <label for="nuevaFecha" class="form-label">Nueva Fecha (dd-mm-yyyy):</label>
-                            <s:textfield name="nuevaFecha" id="nuevaFecha" cssClass="form-control" placeholder="Ej: 10-06-2025"/>
+                            <label for="nuevaFecha" class="form-label">Nueva Fecha (dd/mm/yyyy):</label>
+                            <s:textfield name="nuevaFecha" id="nuevaFecha" cssClass="form-control" placeholder="Ej: 10/06/2025"/>
                         </div>
 
                         <!-- Botón de envío -->
