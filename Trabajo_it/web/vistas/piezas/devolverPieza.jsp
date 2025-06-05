@@ -6,6 +6,7 @@
         <title>Devolver (Dar de Baja) Pieza</title>
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <h2>Devolver Pieza</h2>
 
         <s:form action="devolverPieza" method="post">

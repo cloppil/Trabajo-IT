@@ -14,6 +14,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container mt-5">
             <h1 class="text-center">
                 Alta Vehículo para Cliente <s:property value="#session.cliente.dniCliente" />

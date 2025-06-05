@@ -33,7 +33,7 @@
     </style>
 </head>
 <body>
-
+    <jsp:include page="/vistas/header.jsp" />
     <div class="container">
         <div class="form-container text-center">
             <h2>Baja de Mecanico</h2>

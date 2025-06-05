@@ -14,6 +14,7 @@
         <title>Modificar Pieza</title>
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <h1>Introduce el ID de la pieza que quieres modificar:</h1>
         
         <s:form action="irModificarPiezaSeleccionada" method="post">

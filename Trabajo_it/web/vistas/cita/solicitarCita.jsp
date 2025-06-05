@@ -7,45 +7,10 @@
     <meta charset="UTF-8">
     <link href="<s:url value='/css/bootstrap.min.css' />" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        body {
-            background: #f0f4f8;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .card {
-            max-width: 600px;
-            margin: 50px auto;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            border-radius: 16px;
-        }
-        .card-header {
-            background-color: #0d6efd;
-            color: white;
-            font-size: 1.5rem;
-            text-align: center;
-            border-top-left-radius: 16px;
-            border-top-right-radius: 16px;
-            padding: 20px;
-        }
-        .form-label {
-            font-weight: bold;
-        }
-        .form-select, .form-control {
-            margin-bottom: 15px;
-        }
-        .emoji {
-            font-size: 1.8rem;
-            margin-right: 10px;
-        }
-        .submit-btn {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-    </style>
+    
 </head>
 <body>
-
+    <jsp:include page="/vistas/header.jsp" />
     <div class="card">
         <div class="card-header">
             <span class="emoji">💌</span> Solicita tu Cita

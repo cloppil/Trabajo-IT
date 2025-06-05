@@ -7,11 +7,11 @@
         <meta charset="UTF-8">
         <title>Facturas</title>
         <!-- Bootstrap CSS CDN -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
         <!-- Tu CSS personalizado -->
         <link href="css/estilosVerFacturas.css" rel="stylesheet" />
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container my-5">
             <h1 class="mb-4 text-center">Facturas</h1>
             <table class="table table-striped table-hover table-bordered align-middle">

@@ -14,6 +14,7 @@
         <title>Actualizar vehiculo</title>
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <h1>Introduce la matrícula del coche que quieres editar:</h1>
         
         <s:form action="irActualizarVehiculoSeleccionado" method="post">

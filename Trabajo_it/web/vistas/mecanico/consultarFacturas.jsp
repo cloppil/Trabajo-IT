@@ -8,21 +8,10 @@
 
         <!-- Bootstrap CSS -->
         <link href="<s:url value='/css/bootstrap.min.css'/>" rel="stylesheet">
-        <style>
-            body {
-                font-family: 'Rubik', sans-serif;
-                background-color: #f8f9fa;
-            }
-            .container {
-                margin-top: 50px;
-            }
-            .table thead th {
-                background-color: #0d6efd;
-                color: white;
-            }
-        </style>
+        
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container">
             <h2 class="text-center mb-4">Facturas Generadas</h2>
 

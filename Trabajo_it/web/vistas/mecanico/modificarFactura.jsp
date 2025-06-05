@@ -6,21 +6,10 @@
     <meta charset="UTF-8">
     <title>Modificar Factura - AutoFast</title>
     <link href="<s:url value='/css/bootstrap.min.css'/>" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Rubik', sans-serif;
-            background-color: #f8f9fa;
-        }
-        .container {
-            margin-top: 50px;
-            max-width: 600px;
-        }
-        .form-label {
-            font-weight: bold;
-        }
-    </style>
+    
 </head>
 <body>
+    <jsp:include page="/vistas/header.jsp" />
     <div class="container">
         <h2 class="text-center mb-4">Modificar Factura</h2>
 

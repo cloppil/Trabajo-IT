@@ -1,41 +1,56 @@
-body {
-    margin: 0;
-    padding: 0;
+.header-container {
+    background-color: #3C6E71;
+    color: black;
+    text-align: center;
     font-family: 'Rubik', sans-serif;
 }
 
-.header-container {
-    background-color: #3C6E71;
-    color: white;
-    text-align: center;
-}
-
-.logo-img {
+/* Imagen del logo */
+.header-container .logo-img {
     height: 60px;
     width: auto;
     transition: transform 0.2s ease-in-out;
 }
 
-.logo-img:hover {
+.header-container .logo-img:hover {
     transform: scale(1.05);
 }
 
-.btnModificado {
+/* Botón logout personalizado */
+.header-container .btnModificado {
     background-color: #ffffff;
-    color: #3C6E71;
+    color: black; /* Color del texto oscuro para que contraste con fondo blanco */
     font-weight: 500;
-    
     border-radius: 8px;
     text-decoration: none;
     transition: 0.2s ease-in-out;
     border: none;
 }
 
-.btnModificado:hover {
+.header-container .btnModificado:hover {
     background-color: #d1e7dd;
     color: #1b3c40;
 }
 
-.user-info {
+/* Nombre de usuario */
+.header-container .user-info {
     font-weight: 500;
+    color: #ffffff; /* Asegura que el texto dentro del header sea blanco */
 }
+
+/* Icono de usuario (FA) */
+.header-container i {
+    color: #ffffff; /* Icono también en blanco */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    color: #000000; /* Hace que todo el texto fuera del header sea negro */
+}
+
+label {
+    color: #000000 !important;
+}
+
