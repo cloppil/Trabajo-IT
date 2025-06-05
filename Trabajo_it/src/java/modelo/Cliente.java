@@ -81,6 +81,10 @@ public class Cliente  implements java.io.Serializable {
         this.vehiculos = vehiculos;
     }
 
+    public String getDni() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 
 

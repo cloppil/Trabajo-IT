@@ -215,5 +215,8 @@
             <result name="success">/vistas/bienvenida.jsp</result> 
         </action>
 
+        <action name = "consultarFacturasCliente" class="controlador.ConsultarFacturasClienteAction">
+            <result name = "success">/vistas/cliente/mostrarFacturas.jsp</result>
+        </action>
     </package>
 </struts>

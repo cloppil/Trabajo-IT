@@ -5,12 +5,12 @@
  */
 package DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 import modelo.Cita;
 import modelo.Cliente;
 import modelo.Factura;
 import modelo.HibernateUtil;
-import modelo.Mecanico;
 import modelo.Piezas;
 import modelo.Reparacion;
 import modelo.Vehiculo;
@@ -65,6 +65,60 @@ public class ClienteDAO {
         Cliente cli = (Cliente) q.uniqueResult();
         tx.commit();
         return cli;
+    }
+
+    public List<Factura> listarFacturas(String dni) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+
+        // Paso 1: Obtener todos los vehículos del cliente
+        Query vehiculoQuery = session.createQuery("FROM Vehiculo WHERE dniCliente ='" + dni + "'");
+        List<Vehiculo> vehiculos = vehiculoQuery.list();
+
+        List<Factura> todasLasFacturas = new ArrayList<>();
+
+        for (Vehiculo vehiculo : vehiculos) {
+            // Paso 2: Obtener todas las citas para el vehículo
+            String matricula = vehiculo.getMatricula();
+            Query citaQuery = session.createQuery("FROM Cita WHERE idVehiculo ='" + matricula + "'");
+            List<Cita> citas = citaQuery.list();
+
+            for (Cita cita : citas) {
+                // Paso 3: Obtener todas las reparaciones asociadas a la cita
+                int idCita = cita.getIdCita();
+                Query reparacionQuery = session.createQuery("FROM Reparacion WHERE idCita ='" + idCita + "'");
+                List<Reparacion> reparaciones = reparacionQuery.list();
+
+                for (Reparacion reparacion : reparaciones) {
+                    // Paso 4: Obtener todas las facturas asociadas a la reparación
+                    int idRep = reparacion.getIdReparacion();
+                    Query facturaQuery = session.createQuery("FROM Factura WHERE idReparacion ='" + idRep + "'");
+                    List<Factura> facturas = facturaQuery.list();
+                    todasLasFacturas.addAll(facturas);
+                }
+            }
+        }
+        tx.commit();
+        return todasLasFacturas;
+    }
+
+    public List<Piezas> listarPiezas(List<Factura> listaFacturas) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+
+        List<Piezas> piezasTotales = new ArrayList<>();
+
+        for (Factura factura : listaFacturas) {
+            int idReparacion = factura.getReparacion().getIdReparacion();  // Suponiendo que tienes este getter
+
+            Query piezasQuery = session.createQuery("FROM Piezas WHERE idReparacion ='"+idReparacion+"'");
+            List<Piezas> piezas = piezasQuery.list();
+
+            piezasTotales.addAll(piezas);
+        }
+
+        tx.commit();
+        return piezasTotales;
     }
 
 }
