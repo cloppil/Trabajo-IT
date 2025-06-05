@@ -151,7 +151,7 @@
         </action>
 
         <action name = "nuevoProveedor">
-            <result>/vistas/mecanico/nuevoProveedor.jsp</result>
+            <result>/vistas/proveedor/nuevoProveedor.jsp</result>
         </action>
         
         <action name = "registroProveedor" class="controlador.RegistroProveedorAction">
@@ -159,7 +159,7 @@
         </action>
         
         <action name = "irBorrarProveedor" class="controlador.IrBorrarProveedor">
-            <result name = "success">/vistas/mecanico/bajaProveedor.jsp</result>
+            <result name = "success">/vistas/proveedor/bajaProveedor.jsp</result>
         </action>
         
         <action name = "borrarProveedor" class = "controlador.BorrarProveedorAction">
@@ -213,6 +213,14 @@
         
         <action name ="logout" class="controlador.LogoutAction">
             <result name="success">/vistas/bienvenida.jsp</result> 
+        </action>
+        
+        <action name = "irMostrarProveedores" class="controlador.IrMostrarProveedoresAction">
+            <result name="success">/vistas/proveedor/mostrarProveedores.jsp</result>
+        </action>
+        
+        <action name = "mostrarProveedores" class="controlador.MostrarProveedoresAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
         </action>
 
     </package>

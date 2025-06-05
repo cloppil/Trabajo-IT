@@ -72,7 +72,6 @@
                             </s:form>
                             <s:form action="">
                                 <button type="submit" class="btn btn-outline-success btn-block">Modificar Facturas</button>
-                                <button type="submit" class="btn btn-outline-success">Modificar Facturas</button>
                             </s:form>
                         </div>
                     </div>
@@ -111,7 +110,7 @@
                         <s:form action="irBorrarProveedor">
                             <button type="submit" class="btn btn-outline-secondary btn-block">Baja Proveedor</button>
                         </s:form>
-                        <s:form action="mostrarProveedores">
+                        <s:form action="irMostrarProveedores">
                             <button type="submit" class="btn btn-outline-secondary btn-block">Mostrar Proveedores</button>
                         </s:form>
                     </div>
