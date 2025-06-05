@@ -87,10 +87,7 @@
                             <s:form action="irCancelarCita">
                                 <button type="submit" class="btn btn-outline-warning btn-block">Cancelar Cita</button>
 
-                            </s:form>
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning btn-block">Actualizar Cita</button>
-                            </s:form>
+                            </s:form>                               
                             <s:form action="irMostrarCitas">
                                 <button type="submit" class="btn btn-outline-warning btn-block">Mostrar Citas Pendientes</button>
 

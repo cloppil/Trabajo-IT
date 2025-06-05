@@ -20,6 +20,13 @@
             .custom-table tbody tr:hover {
                 background-color: #f1f1f1;
             }
+            .btn-sm {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.875rem;
+            }
+            form {
+                margin: 0;
+            }
         </style>
     </head>
     <body>
@@ -31,7 +38,7 @@
                     <thead>
                         <tr>
                             <th scope="col">Vehículo</th>
-                            <th scope="col">Fecha</th>
+                            <th scope="col">Fecha</th>           
                         </tr>
                     </thead>
                     <tbody>
@@ -39,13 +46,17 @@
                             <tr>
                                 <td><s:property value="%{#cita.vehiculo.matricula}"/></td>
                                 <td><s:date name="%{#cita.fecha}" format="dd/MM/yyyy HH:mm"/></td>
+                                <td>
+                                    <s:form action="modificarFechaCita" method="post" cssClass="d-inline">
+                                        <s:hidden name="idCita" value="%{#cita.idCita}" />
+                                        <button type="submit" class="btn btn-primary btn-sm">Modificar</button>
+                                    </s:form>
+                                </td>
                             </tr>
                         </s:iterator>
                     </tbody>
                 </table>
             </div>
-
         </div>
     </body>
 </html>
-
