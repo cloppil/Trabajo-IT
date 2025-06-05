@@ -147,6 +147,7 @@
         
         <action name = "irConsultarMecanico">
             <result>/vistas/mecanico/consultarMecanico.jsp</result>
+        </action>
 
         <action name = "nuevoProveedor">
             <result>/vistas/mecanico/nuevoProveedor.jsp</result>
