@@ -5,6 +5,7 @@
  */
 package DAO;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import modelo.Cita;
@@ -54,8 +55,6 @@ public class CitaDAO {
         return c;
     }
 
-    
-
     public void eliminarCita(Cita c) {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
@@ -63,6 +62,29 @@ public class CitaDAO {
         tx.commit();
     }
 
+
+    public List<Cita> obtenerCitasDisponibles(List<Cita> listadoCitas) {
+        Date hoy = new Date();
+        List<Cita> listadoCitasActualizado = new ArrayList<>();;
+        for (int i = 0; i < listadoCitas.size(); i++) {
+            Date fecha = listadoCitas.get(i).getFecha();
+            if (fecha.after(hoy)) {
+                listadoCitasActualizado.add(listadoCitas.get(i));
+            }
+        }
+        return listadoCitasActualizado;
+    }
+
+    public void actualizarCita(Cita cita) {
+        Transaction tx = null;
+
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        tx = session.beginTransaction();
+
+        session.update(cita);
+
+        tx.commit();
+    }
     public List<Cita> obtenerCitasMecanico(String dniMecanico) {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();

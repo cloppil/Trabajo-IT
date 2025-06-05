@@ -79,5 +79,14 @@ public class VehiculoDAO {
         tx.commit();
     }
 
+    public List<Vehiculo> obtenerVehiculosCliente(String dni) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
 
+        // Paso 1: Obtener todos los vehículos del cliente
+        Query vehiculoQuery = session.createQuery("FROM Vehiculo WHERE dniCliente ='" + dni + "'");
+        List<Vehiculo> vehiculos = vehiculoQuery.list();
+        tx.commit();
+        return vehiculos;
+    }
 }

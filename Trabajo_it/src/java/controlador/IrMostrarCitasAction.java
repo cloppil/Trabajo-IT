@@ -30,25 +30,11 @@ public class IrMostrarCitasAction {
         Cliente c = (Cliente)session.get("cliente");
         CitaDAO cDAO = new CitaDAO();
         List<Cita> listadoCitas = cDAO.obtenerCitasPorDNI(c.getDniCliente());
-        listadoCitas = obtenerCitasDisponibles(listadoCitas);
+        listadoCitas = cDAO.obtenerCitasDisponibles(listadoCitas);
         if(listadoCitas == null){
             return ERROR;
         }
         session.put("listadoCitas", listadoCitas);
         return SUCCESS;
     }
-
-    private List<Cita> obtenerCitasDisponibles(List<Cita> listadoCitas) {
-        Date hoy = new Date();
-        List<Cita> listadoCitasActualizado = new ArrayList<>();;
-        for(int i = 0; i< listadoCitas.size(); i++){
-            Date fecha = listadoCitas.get(i).getFecha();
-            if(fecha.after(hoy)){
-                listadoCitasActualizado.add(listadoCitas.get(i));
-            }
-        }
-        return listadoCitasActualizado;
-    }
-    
-    
 }

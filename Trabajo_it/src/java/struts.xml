@@ -225,7 +225,18 @@
 
         <action name = "consultarFacturasCliente" class="controlador.ConsultarFacturasClienteAction">
             <result name = "success">/vistas/cliente/mostrarFacturas.jsp</result>
+        </action>       
+        
+        <action name = "modificarFechaCita" class="controlador.ModificarFechaCitaAction">
+            <result>/vistas/cita/cambiarFechaCitaSeleccionada.jsp</result>
         </action>
+
+        <action name = "guardarNuevaFechaCita" class="controlador.GuardarNuevaFechaCitaAction">
+            <result name="success">/vistas/cliente/cliente.jsp</result>
+        </action>
+        
+        
+
         
 
         <action name = "irAltaReparacion" class="controlador.IrAltaReparaciónAction">
