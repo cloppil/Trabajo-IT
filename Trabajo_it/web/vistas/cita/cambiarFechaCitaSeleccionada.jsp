@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="<s:url value='/css/cambiarFecha.css'/>">
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container form-container mt-5">
             <div class="card shadow-sm">
                 <div class="card-header bg-primary text-white">

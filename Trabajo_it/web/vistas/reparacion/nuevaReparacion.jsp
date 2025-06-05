@@ -15,6 +15,7 @@
         <title>Nueva Reparación</title>
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <h1>Introduce los datos de la reparación</h1>
         <table> 
             <tr>

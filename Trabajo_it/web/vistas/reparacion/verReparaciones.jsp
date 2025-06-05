@@ -13,6 +13,7 @@
         <title>Ver Reparaciones</title>
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container text-center table-container">
             <h2 class="mb-4">Reparaciones <strong><s:property value="#session.mecanico.nombre"/></strong></h2>
 

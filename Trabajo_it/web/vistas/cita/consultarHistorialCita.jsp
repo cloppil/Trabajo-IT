@@ -23,6 +23,7 @@
         </style>
     </head>
     <body>
+        <jsp:include page="/vistas/header.jsp" />
         <div class="container text-center table-container">
             <h2 class="mb-4">Citas pendientes de <strong><s:property value="#session.cliente.nombre"/></strong></h2>
 
