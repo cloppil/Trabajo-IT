@@ -1,62 +1,30 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Baja de Cliente - AutoFast</title>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Baja de Cliente - AutoFast</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/estilosBajaCliente.css" rel="stylesheet">
+    </head>
+    <body class="baja-body d-flex align-items-center justify-content-center">
 
-    <!-- Bootstrap CSS -->
-    <link href="<s:url value='/css/bootstrap.min.css'/>" rel="stylesheet">
+        <div class="baja-container text-center">
+            <h2 class="text-danger mb-4">Baja de Cliente</h2>
 
-    <!-- Estilos personalizados del header -->
-    <link href="<s:url value='/css/header.css'/>" rel="stylesheet">
-
-    <style>
-        body {
-            background-color: #f9f9f9;
-        }
-
-        .form-container {
-            max-width: 500px;
-            margin: 60px auto;
-            padding: 30px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .form-container h2 {
-            margin-bottom: 30px;
-            font-weight: bold;
-            color: #d9534f;
-        }
-
-        .btn-danger {
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Incluir header -->
-    <jsp:include page="/vistas/header.jsp" />
-
-    <div class="container">
-        <div class="form-container text-center">
-            <h2>Baja de Cliente</h2>
-
-            <p>¿Estás seguro que deseas eliminar al cliente <strong><s:property value="#session.cliente.nombre"/></strong>?</p>
-
-            <s:form action="bajaCliente" method="post" cssClass="form-horizontal">
-                <button type="submit" class="btn btn-danger">
-                    <span class="glyphicon glyphicon-trash"></span> Eliminar Cliente
+            <p class="mb-4 fs-5">
+                ¿Estás seguro que deseas eliminar al cliente 
+                <strong><s:property value="#session.cliente.nombre"/></strong>?
+            </p>
+            <s:form action="bajaCliente" method="post" cssClass="w-100">
+                <button type="submit" class="btn btn-danger btn-lg w-100">
+                    <i class="bi bi-trash3-fill me-2"></i>Eliminar Cliente
                 </button>
             </s:form>
         </div>
-    </div>
-
-    <script src="<s:url value='/js/bootstrap.bundle.min.js'/>" defer></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    </body>
 </html>

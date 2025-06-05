@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-jun-2025, 18:25:23
+    Author     : ferna
+*/
+/* Fondo con degradado suave */
+body.consult-body {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor centrado y con tarjeta */
+.consult-container {
+    max-width: 450px;
+    padding: 2rem 2.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+.consult-main h2 {
+    font-size: 1.75rem;
+}
+
+/* Estilo para la tabla */
+table.table {
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+table.table thead th {
+    background-color: #0d6efd;
+    color: white;
+}
+
+table.table th {
+    background-color: #f8f9fa;
+    width: 35%;
+    text-align: left;
+}
+
+table.table td {
+    vertical-align: middle;
+}
+
+

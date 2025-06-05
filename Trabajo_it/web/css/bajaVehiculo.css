@@ -1,0 +1,41 @@
+/* Fondo general con degradado */
+body.baja-body {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;     /* Centra vertical */
+    justify-content: center; /* Centra horizontal */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tarjeta del formulario */
+.baja-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Sombreado más suave y profundo */
+}
+
+.form-baja .form-control {
+    border-radius: 0.5rem;
+}
+
+.form-baja .btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.form-baja h1 {
+    font-size: 1.75rem;
+}
+
+.alert {
+    font-size: 0.95rem;
+}
+
+.form-baja label.form-label {
+    color: #6c757d;
+}

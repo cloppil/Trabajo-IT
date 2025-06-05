@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-jun-2025, 18:38:37
+    Author     : ferna
+*/
+/* Fondo general con degradado */
+body.update-body {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tarjeta del formulario */
+.update-container {
+    max-width: 450px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-update .form-control {
+    border-radius: 0.5rem;
+}
+
+.form-update .btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.form-update h1 {
+    font-size: 1.75rem;
+    color: #0d6efd;
+}
+
+.form-update p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.form-update label.form-label {
+    color: #6c757d;
+}
+

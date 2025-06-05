@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-jun-2025, 18:27:04
+    Author     : ferna
+*/
+body.baja-body {
+    background: linear-gradient(135deg, #fcebea, #f9d6d5);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.baja-container {
+    max-width: 420px;
+    padding: 2.5rem 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(220, 53, 69, 0.2);
+}
+
+.baja-container h2 {
+    font-weight: 700;
+}
+
+.baja-container p {
+    color: #6c757d;
+}
+
+.btn-danger {
+    border-radius: 0.5rem;
+    font-weight: 600;
+    padding: 0.75rem 0;
+    font-size: 1.125rem;
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    background-color: #bb2d3b;
+    box-shadow: 0 8px 20px rgba(187, 45, 59, 0.5);
+}
+

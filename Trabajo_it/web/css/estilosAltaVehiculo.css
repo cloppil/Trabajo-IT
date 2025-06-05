@@ -1,0 +1,44 @@
+/* Fondo general con degradado */
+body.alta-body {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tarjeta del formulario */
+.alta-container {
+    max-width: 450px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.needs-validation .form-control {
+    border-radius: 0.5rem;
+}
+
+.needs-validation .btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.alta-container h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #0d6efd; /* Bootstrap primary */
+}
+
+.alert {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.needs-validation label.form-label {
+    color: #6c757d; /* texto gris */
+}
