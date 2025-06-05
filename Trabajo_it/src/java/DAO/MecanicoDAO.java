@@ -66,4 +66,11 @@ public class MecanicoDAO {
         tx.commit();
     }
 
+    public void actualizarMecanico(Mecanico m) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.merge(m);
+        tx.commit();
+    }
+
 }

@@ -20,7 +20,6 @@
             <result name = "success">/vistas/cliente/cliente.jsp</result>
         </action>
         
-  
         
         <action name = "cliente">
             <result>/vistas/cliente/cliente.jsp</result>
@@ -138,6 +137,17 @@
             <result name="success">/vistas/cita/mostrarCita.jsp</result>
         </action>
         
+        <action name = "irActualizarMecanico" class = "controlador.IrActualizarMecanicoAction">
+            <result name = "success">/vistas/mecanico/actualizarMecanico.jsp</result>
+        </action>
+        
+        <action name = "actualizarMecanico" class = "controlador.ActualizarMecanicoAction">
+            <result name = "success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+        
+        <action name = "irConsultarMecanico">
+            <result>/vistas/mecanico/consultarMecanico.jsp</result>
+        </action>
         
     </package>
 </struts>

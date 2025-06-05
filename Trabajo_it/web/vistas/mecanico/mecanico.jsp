@@ -30,17 +30,17 @@
                             <s:form action="irBajaMecanico">
                                 <button type="submit" class="btn btn-outline-primary">Baja Mecánico</button>
                             </s:form>
-                            <s:form action="">
+                            <s:form action="irActualizarMecanico">
                                 <button type="submit" class="btn btn-outline-primary">Actualizar Mis Datos de Mecánico</button>
                             </s:form>
-                            <s:form action="">
+                            <s:form action="irConsultarMecanico">
                                 <button type="submit" class="btn btn-outline-primary">Consultar Mis Datos de Mecánico</button>
                             </s:form>
                         </div>
                     </div>
                 </div>
 
-                <!-- Vehículos del Cliente -->
+                <!-- Reparaciones -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-info text-white text-center">Reparaciones</div>

@@ -14,22 +14,21 @@
             <table class="table table-bordered table-striped">
                 <tr>
                     <th>DNI</th>
-                    <td><s:property value="#session.cliente.dniCliente"/></td>
+                    <td><s:property value="#session.mecanico.dniMecanico"/></td>
                 </tr>
                 <tr>
                     <th>Nombre</th>
-                    <td><s:property value="#session.cliente.nombre"/></td>
+                    <td><s:property value="#session.mecanico.nombre"/></td>
                 </tr>
                 <tr>
-                    <th>Teléfono</th>
-                    <td><s:property value="#session.cliente.telefono"/></td>
+                    <th>Salario</th>
+                    <td><s:property value="#session.mecanico.salario"/></td>
                 </tr>
                 <tr>
-                    <th>Email</th>
-                    <td><s:property value="#session.cliente.email"/></td>
+                    <th>Rama</th>
+                    <td><s:property value="#session.mecanico.rama"/></td>
                 </tr>
             </table>
-
 
 
         </div>
