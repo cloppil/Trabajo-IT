@@ -28,13 +28,13 @@
                         <div class="card-header bg-primary text-white text-center">Gestión de Cliente</div>
                         <div class="card-body d-grid gap-2">
                             <s:form action="irBajaCliente">
-                                <button type="submit" class="btn btn-outline-primary">Baja Cliente</button>
+                                <button type="submit" class="btn btn-outline-primary btn-block">Baja Cliente</button>
                             </s:form>
                             <s:form action="irActualizarCliente">
-                                <button type="submit" class="btn btn-outline-primary">Actualizar Mis Datos</button>
+                                <button type="submit" class="btn btn-outline-primary btn-block">Actualizar Mis Datos</button>
                             </s:form>
                             <s:form action="irConsultarCliente">
-                                <button type="submit" class="btn btn-primary btn-block">Consultar Mis Datos</button>
+                                <button type="submit" class="btn btn-outline-primary btn-block">Consultar Mis Datos</button>
                             </s:form>
                         </div>
                     </div>
@@ -46,16 +46,16 @@
                         <div class="card-header bg-info text-white text-center">Vehículos del Cliente</div>
                         <div class="card-body d-grid gap-2">
                             <s:form action="irAltaVehiculo">
-                                <button type="submit" class="btn btn-outline-info">Alta Vehículo</button>
+                                <button type="submit" class="btn btn-outline-info btn-block">Alta Vehículo</button>
                             </s:form>
                             <s:form action="irBajaVehiculo">
-                                <button type="submit" class="btn btn-outline-info">Baja Vehículo</button>
+                                <button type="submit" class="btn btn-outline-info btn-block">Baja Vehículo</button>
                             </s:form>
                             <s:form action="irActualizarVehiculo">
-                                <button type="submit" class="btn btn-outline-info">Actualizar Vehículo</button>
+                                <button type="submit" class="btn btn-outline-info btn-block">Actualizar Vehículo</button>
                             </s:form>
                             <s:form action="irConsultarVehiculos">
-                                <button type="submit" class="btn btn-outline-info">Consultar Vehículos</button>
+                                <button type="submit" class="btn btn-outline-info btn-block">Consultar Vehículos</button>
                             </s:form>
                         </div>
                     </div>
@@ -67,10 +67,10 @@
                         <div class="card-header bg-success text-white text-center">Historial y Facturas</div>
                         <div class="card-body d-grid gap-2">
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-success">Consultar Historial</button>
+                                <button type="submit" class="btn btn-outline-success btn-block">Consultar Historial</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-success">Consultar Facturas</button>
+                                <button type="submit" class="btn btn-outline-success btn-block">Consultar Facturas</button>
                             </s:form>
                         </div>
                     </div>
@@ -82,16 +82,16 @@
                         <div class="card-header bg-warning text-dark text-center">Gestión de Citas</div>
                         <div class="card-body d-grid gap-2">
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning">Solicitar Cita</button>
+                                <button type="submit" class="btn btn-outline-warning btn-block">Solicitar Cita</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning">Cancelar Cita</button>
+                                <button type="submit" class="btn btn-outline-warning btn-block">Cancelar Cita</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning">Actualizar Cita</button>
+                                <button type="submit" class="btn btn-outline-warning btn-block">Actualizar Cita</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning">Mostrar Citas</button>
+                                <button type="submit" class="btn btn-outline-warning btn-block">Mostrar Citas</button>
                             </s:form>
                         </div>
                     </div>

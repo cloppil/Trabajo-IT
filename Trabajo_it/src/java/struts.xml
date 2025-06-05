@@ -17,10 +17,10 @@
         </action>
 
         <action name = "actualizarCliente" class = "controlador.ActualizarClienteAction">
-            <result name = "success">/vistas/cliente/clientes.jsp</result>
+            <result name = "success">/vistas/cliente/cliente.jsp</result>
         </action>
         
-        
+  
         
         <action name = "cliente">
             <result>/vistas/cliente/cliente.jsp</result>
@@ -68,8 +68,8 @@
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
         
-        <action name = "actualizarCliente" class="controlador.ActualizarClienteAction">
-            <result name="success">/vistas/cliente/cliente.jsp</result>
+        <action name = "irActualizarCliente" class = "controlador.IrActualizarClienteAction">
+            <result name = "success">/vistas/cliente/actualizarCliente.jsp</result>
         </action>
         
         <action name = "irActualizarVehiculo">
