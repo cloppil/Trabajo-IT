@@ -15,7 +15,6 @@
         
     </head>
     <body>
-        <jsp:include page="/vistas/header.jsp" />
         <main class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
             <div class="card shadow-lg rounded-4 p-4 solicitar-cita-card">
                 <div class="card-header text-white text-center rounded-top-4 bg-primary py-3">

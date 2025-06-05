@@ -38,9 +38,6 @@
                                         <s:submit value="Eliminar"/>
                                         <s:hidden name="idReparacion" value="%{#reparacion.idReparacion}"/>
                                     </s:form></td>
-                                <td><s:form action="">
-                                        <button type="submit" class="btn btn-outline-info btn-block">Modificar Reparación</button>
-                                    </s:form></td>
                             </tr>
                         </s:iterator>
                     </tbody>

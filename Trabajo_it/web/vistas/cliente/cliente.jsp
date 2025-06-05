@@ -65,7 +65,7 @@
                 <!-- Historial y Facturas -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm">
-                        <div class="card-header bg-success text-white text-center">Historial y Facturas</div>
+                        <div class="card-header bg-success text-white text-center">Facturas</div>
                         <div class="card-body d-grid gap-2">
 
                             <s:form action="consultarFacturasCliente">

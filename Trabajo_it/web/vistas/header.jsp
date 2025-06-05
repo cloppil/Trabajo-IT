@@ -16,9 +16,9 @@
     <body>
         <div class="header-container d-flex flex-column align-items-center justify-content-center py-3">
             <!-- Logo centrado -->
-            <a href="<s:url action='volverInicioCliente'/>">
+            
                 <img src="<s:url value='/images/logo.png'/>" alt="Logo AutoFast" class="logo-img mb-2">
-            </a>
+                
 
             <!-- Botón Logout centrado -->
             <div class="d-flex align-items-center justify-content-center">

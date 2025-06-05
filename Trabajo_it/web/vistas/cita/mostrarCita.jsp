@@ -1,23 +1,30 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <title>Mostrar Citas Pendientes</title>
-        <link href="<s:url value='/css/bootstrap.min.css' />" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link href="<s:url value='/css/bootstrap.min.css'/>" rel="stylesheet">
+        <!-- CSS personalizado -->
+        <link href="<s:url value='/css/estilosMostrarCitas.css'/>" rel="stylesheet">
     </head>
-    <body>
-        <jsp:include page="/vistas/header.jsp" />
-        <div class="container text-center table-container">
-            <h2 class="mb-4">Citas pendientes de <strong><s:property value="#session.cliente.nombre"/></strong></h2>
+    <body class="update-body d-flex align-items-center justify-content-center">
+
+        <div class="update-container w-100">
+            <h2 class="mb-4 text-center text-primary fw-bold">
+                Citas pendientes de <strong><s:property value="#session.cliente.nombre"/></strong>
+            </h2>
 
             <div class="table-responsive">
-                <table class="table table-bordered table-hover custom-table mx-auto">
-                    <thead>
+                <table class="table table-bordered table-hover table-striped custom-table align-middle">
+                    <thead class="table-dark">
                         <tr>
                             <th scope="col">Vehículo</th>
                             <th scope="col">Fecha</th>           
+                            <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,5 +44,7 @@
                 </table>
             </div>
         </div>
+
     </body>
 </html>
+

@@ -39,7 +39,7 @@ public class ConsultarFacturasClienteAction extends ActionSupport {
             if (cliente != null) {
                 String dni = cliente.getDniCliente();
 
-                // 2. Pasar el DNI al DAO
+                
                 ClienteDAO cliDAO = new ClienteDAO();
                 listaFacturas = cliDAO.listarFacturas(dni);
                 listaPiezas = cliDAO.listarPiezas(listaFacturas);
