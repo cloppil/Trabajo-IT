@@ -46,7 +46,7 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-info text-white text-center">Reparaciones</div>
                         <div class="card-body d-grid gap-2">
-                            <s:form action="">
+                            <s:form action="irAltaReparacion">
                                 <button type="submit" class="btn btn-outline-info btn-block">Alta Reparación</button>
                             </s:form>
                             <s:form action="">
@@ -67,12 +67,8 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-success text-white text-center">Facturas</div>
                         <div class="card-body d-grid gap-2">
-                            <s:form action="">
+                            <s:form action="irConsultarFacturasMecanico">
                                 <button type="submit" class="btn btn-outline-success btn-block">Consultar Facturas</button>
-                            </s:form>
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-success btn-block">Modificar Facturas</button>
-                                <button type="submit" class="btn btn-outline-success">Modificar Facturas</button>
                             </s:form>
                         </div>
                     </div>
@@ -84,16 +80,16 @@
                         <div class="card-header bg-warning text-dark text-center">Gestión de piezas</div>
                         <div class="card-body d-grid gap-2">
                             <s:form action="irSolicitarPieza">
-                                <button type="submit" class="btn btn-outline-warning">Solicitar Pieza</button>
+                                <button type="submit" class="btn btn-outline-secondary btn-block">Solicitar Pieza</button>
                             </s:form>
                             <s:form action="irDevolverPieza">
-                                <button type="submit" class="btn btn-outline-warning">Devolver Pieza</button>
+                                <button type="submit" class="btn btn-outline-secondary btn-block">Devolver Pieza</button>
                             </s:form>
                             <s:form action="irModificarPieza">
-                                <button type="submit" class="btn btn-outline-warning">Modificar Pieza</button>
+                                <button type="submit" class="btn btn-outline-secondary btn-block">Modificar Pieza</button>
                             </s:form>
                             <s:form action="irConsultarPiezas">
-                                <button type="submit" class="btn btn-outline-warning">Mostrar Piezas disponibles</button>
+                                <button type="submit" class="btn btn-outline-secondary btn-block">Mostrar Piezas disponibles</button>
                             </s:form>
                         </div>
                     </div>
@@ -111,7 +107,7 @@
                         <s:form action="irBorrarProveedor">
                             <button type="submit" class="btn btn-outline-secondary btn-block">Baja Proveedor</button>
                         </s:form>
-                        <s:form action="mostrarProveedores">
+                        <s:form action="irMostrarProveedores">
                             <button type="submit" class="btn btn-outline-secondary btn-block">Mostrar Proveedores</button>
                         </s:form>
                     </div>

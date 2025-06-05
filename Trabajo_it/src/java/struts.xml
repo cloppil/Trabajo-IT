@@ -151,7 +151,7 @@
         </action>
 
         <action name = "nuevoProveedor">
-            <result>/vistas/mecanico/nuevoProveedor.jsp</result>
+            <result>/vistas/proveedor/nuevoProveedor.jsp</result>
         </action>
         
         <action name = "registroProveedor" class="controlador.RegistroProveedorAction">
@@ -159,7 +159,7 @@
         </action>
         
         <action name = "irBorrarProveedor" class="controlador.IrBorrarProveedor">
-            <result name = "success">/vistas/mecanico/bajaProveedor.jsp</result>
+            <result name = "success">/vistas/proveedor/bajaProveedor.jsp</result>
         </action>
         
         <action name = "borrarProveedor" class = "controlador.BorrarProveedorAction">
@@ -214,6 +214,14 @@
         <action name ="logout" class="controlador.LogoutAction">
             <result name="success">/vistas/bienvenida.jsp</result> 
         </action>
+        
+        <action name = "irMostrarProveedores" class="controlador.IrMostrarProveedoresAction">
+            <result name="success">/vistas/proveedor/mostrarProveedores.jsp</result>
+        </action>
+        
+        <action name = "mostrarProveedores" class="controlador.MostrarProveedoresAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
 
         <action name = "consultarFacturasCliente" class="controlador.ConsultarFacturasClienteAction">
             <result name = "success">/vistas/cliente/mostrarFacturas.jsp</result>
@@ -222,10 +230,40 @@
         <action name = "modificarFechaCita" class="controlador.ModificarFechaCitaAction">
             <result>/vistas/cita/cambiarFechaCitaSeleccionada.jsp</result>
         </action>
+
         <action name = "guardarNuevaFechaCita" class="controlador.GuardarNuevaFechaCitaAction">
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
         
         
+
+        
+
+        <action name = "irAltaReparacion" class="controlador.IrAltaReparaciónAction">
+            <result name="success">/vistas/reparacion/nuevaReparacion.jsp</result>
+        </action>
+        
+        <action name = "nuevaReparacion" class="controlador.NuevaReparacionAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+        
+
+        
+        <action name = "irConsultarFacturasMecanico" class="controlador.IrConsultarFacturasAction">
+            <result name="success">/vistas/mecanico/consultarFacturas.jsp</result>
+        </action>
+        
+        <action name = "consultarFacturasMecanico" class="controlador.ConsultarFacturasAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+        
+        <action name = "irModificarFactura" class="controlador.IrModificarFacturaAction">
+            <result name="success">/vistas/mecanico/modificarFactura.jsp</result>
+        </action>
+        
+        <action name = "modificarFactura" class="controlador.ModificarFacturaAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+
     </package>
 </struts>
