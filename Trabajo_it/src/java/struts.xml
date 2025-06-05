@@ -227,6 +227,7 @@
             <result name = "success">/vistas/cliente/mostrarFacturas.jsp</result>
         </action>
         
+
         <action name = "irAltaReparacion" class="controlador.IrAltaReparaciónAction">
             <result name="success">/vistas/reparacion/nuevaReparacion.jsp</result>
         </action>
@@ -235,5 +236,23 @@
             <result name="success">/vistas/mecanico/mecanico.jsp</result>
         </action>
         
+
+        
+        <action name = "irConsultarFacturasMecanico" class="controlador.IrConsultarFacturasAction">
+            <result name="success">/vistas/mecanico/consultarFacturas.jsp</result>
+        </action>
+        
+        <action name = "consultarFacturasMecanico" class="controlador.ConsultarFacturasAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+        
+        <action name = "irModificarFactura" class="controlador.IrModificarFacturaAction">
+            <result name="success">/vistas/mecanico/modificarFactura.jsp</result>
+        </action>
+        
+        <action name = "modificarFactura" class="controlador.ModificarFacturaAction">
+            <result name="success">/vistas/mecanico/mecanico.jsp</result>
+        </action>
+
     </package>
 </struts>
