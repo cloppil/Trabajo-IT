@@ -8,6 +8,7 @@ package DAO;
 import java.util.List;
 import modelo.HibernateUtil;
 import modelo.Mecanico;
+import modelo.Proveedor;
 import modelo.Vehiculo;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -30,7 +31,6 @@ public class MecanicoDAO {
         return mec;
     }
 
-
     public void bajaPropietario(Mecanico m) {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
@@ -50,19 +50,53 @@ public class MecanicoDAO {
     public Mecanico obtenerMecanicoPorDNI(String mecanicoSeleccionado) {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
-        Query q = session.createQuery("From Mecanico where dniMecanico = '" + mecanicoSeleccionado+"'");
+        Query q = session.createQuery("From Mecanico where dniMecanico = '" + mecanicoSeleccionado + "'");
         Mecanico m = (Mecanico) q.uniqueResult();
         tx.commit();
         return m;
     }
 
-   
-    
-
     public void altaMecanico(Mecanico mec) {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         session.save(mec);
+        tx.commit();
+    }
+
+    public void altaProveedor(Proveedor p) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.save(p);
+        tx.commit();
+    }
+
+    public List listarProveedores() {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        org.hibernate.Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Proveedor");
+        List resultados = (List<Proveedor>) q.list();
+        tx.commit();
+
+        return resultados;
+    }
+
+    public Proveedor encontrarProveedor(int idProveedor) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        org.hibernate.Transaction tx = session.beginTransaction();
+
+        Query q = session.createQuery("from Proveedor where idProveedor =" + idProveedor);
+
+        Proveedor p = (Proveedor) q.uniqueResult();
+
+        tx.commit();
+
+        return p;
+    }
+
+    public void eliminarProveedor(Proveedor p) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        session.delete(p);
         tx.commit();
     }
 

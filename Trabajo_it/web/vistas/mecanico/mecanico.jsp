@@ -18,88 +18,104 @@
     <body class="bg-light">
         <div class="container py-5">
             <div class="text-center welcome-box mb-5">
-                <h1 class="fw-bold text-primary">Bienvenido a AutoFast <s:property value="#session.mecanico.nombre"/></h1>
+                <h1 class="fw-bold text-primary">Menú mecánico <s:property value="#session.mecanico.nombre"/></h1>
             </div>
 
             <div class="row g-4">
-                <!-- Gestión de Cliente -->
+                <!-- Gestión de Mecanico -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-primary text-white text-center">Gestión de Mecanico</div>
                         <div class="card-body d-grid gap-2">
                             <s:form action="irBajaMecanico">
-                                <button type="submit" class="btn btn-outline-primary">Baja Mecánico</button>
+                                <button type="submit" class="btn btn-outline-primary btn-block">Baja Mecánico</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-primary">Actualizar Mis Datos de Mecánico</button>
+                                <button type="submit" class="btn btn-outline-primary btn-block">Actualizar Mis Datos de Mecánico</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-primary">Consultar Mis Datos de Mecánico</button>
+                                <button type="submit" class="btn btn-outline-primary btn-block">Consultar Mis Datos de Mecánico</button>
                             </s:form>
                         </div>
                     </div>
                 </div>
 
-                <!-- Vehículos del Cliente -->
+                <!-- Reparaciones -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-info text-white text-center">Reparaciones</div>
                         <div class="card-body d-grid gap-2">
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-info">Alta Reparación</button>
+                                <button type="submit" class="btn btn-outline-info btn-block">Alta Reparación</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-info">Eliminar Reparación</button>
+                                <button type="submit" class="btn btn-outline-info btn-block">Eliminar Reparación</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-info">Modificar Reparación</button>
+                                <button type="submit" class="btn btn-outline-info btn-block">Modificar Reparación</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-info">Ver Reparaciones</button>
+                                <button type="submit" class="btn btn-outline-info btn-block">Ver Reparaciones</button>
                             </s:form>
                         </div>
                     </div>
                 </div>
 
-                <!-- Historial y Facturas -->
+                <!-- Facturas -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm">
-                        <div class="card-header bg-success text-white text-center">Historial y Facturas</div>
+                        <div class="card-header bg-success text-white text-center">Facturas</div>
                         <div class="card-body d-grid gap-2">
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-success">Consultar Facturas</button>
+                                <button type="submit" class="btn btn-outline-success btn-block">Consultar Facturas</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-success">Modificar Facturas</button>
-                            </s:form>
-                            <s:form action="">
-                                <button type="submit" class="btn btn-outline-success">Modificar Facturas</button>
+                                <button type="submit" class="btn btn-outline-success btn-block">Modificar Facturas</button>
                             </s:form>
                         </div>
                     </div>
                 </div>
 
-                <!-- Gestión de Citas -->
+                <!-- Gestión de Piezas -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-warning text-dark text-center">Gestión de piezas</div>
                         <div class="card-body d-grid gap-2">
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning">Solicitar Pieza</button>
+                                <button type="submit" class="btn btn-outline-warning btn-block">Solicitar Pieza</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning">Devolver Pieza</button>
+                                <button type="submit" class="btn btn-outline-warning btn-block">Devolver Pieza</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning">Modificar Pieza</button>
+                                <button type="submit" class="btn btn-outline-warning btn-block">Modificar Pieza</button>
                             </s:form>
                             <s:form action="">
-                                <button type="submit" class="btn btn-outline-warning">Mostrar Piezas disponibles</button>
+                                <button type="submit" class="btn btn-outline-warning btn-block">Mostrar Piezas disponibles</button>
                             </s:form>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Gestión de Proveedores -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-warning text-white text-center">Gestión de Proveedores</div>
+                    <div class="card-body d-grid gap-2">
+                        <s:form action="nuevoProveedor">
+                            <button type="submit" class="btn btn-outline-secondary btn-block">Alta Proveedor</button>
+                        </s:form>
+                        <s:form action="irBorrarProveedor">
+                            <button type="submit" class="btn btn-outline-secondary btn-block">Baja Proveedor</button>
+                        </s:form>
+                        <s:form action="mostrarProveedores">
+                            <button type="submit" class="btn btn-outline-secondary btn-block">Mostrar Proveedores</button>
+                        </s:form>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <script src="<s:url value='/js/bootstrap.bundle.min.js'/>" defer></script>

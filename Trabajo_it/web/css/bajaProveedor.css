@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-jun-2025, 11:02:59
+    Author     : ferna
+*/
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 60px;
+}
+
+.container {
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #0d6efd; /* Bootstrap primary */
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    margin-bottom: 20px;
+}
+
+input[type="submit"], .btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+
