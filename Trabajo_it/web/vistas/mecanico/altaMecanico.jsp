@@ -1,60 +1,55 @@
-<%-- 
-    Document   : registrarseForm
-    Created on : 04-jun-2025, 10:21:14
-    Author     : ferna
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registrarse</title>
-        <s:head/>
-    </head>
-    <body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Mecánico</title>
+    <s:head />
 
-        <div class="container-fluid text-center" style="height: 79vh;">
-            <div class="row h-100 justify-content-center">
-                <main class="form-signin col-lg-3 col-md-6 col-12 align-self-center">
-                    <s:form action="registroMecanico" method="post" theme="simple">
-                        <h1 class="h3 mb-3 fw-normal">Introduce tus datos</h1>
-                        <div class="form-floating">
-                            <label for="floatingInput">Nombre: </label><br/>
-                            <s:textfield name="nombre" id="floatingInput" cssClass="form-control"/>
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Estilos personalizados (si tienes alguno) -->
+    <link href="${pageContext.request.contextPath}/css/estilosRegistro.css" rel="stylesheet" />
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center min-vh-100">
 
-                        </div>
-                        <div class="form-floating">
-                            <label for="floatingInput">Contraseña: </label><br/>
-                            <s:password name="password" placeholder="Contraseña" cssClass="form-control"></s:password>
+    <main class="form-update w-100 m-auto" style="max-width: 450px;">
+        <s:form action="registroMecanico" method="post" theme="simple">
+            <h1 class="h3 mb-4 fw-bold text-primary text-center">
+                <i class="bi bi-wrench-adjustable me-2"></i>Registro de Mecánico
+            </h1>
 
-                        </div>
-
-                        <div class="form-floating">
-                            <label for="floatingInput">DNI: </label><br/>
-                            <s:textfield name="dni" id="floatingInput" cssClass="form-control" placeholder="67534287B"/>
-
-                        </div>
-
-                        <div class="form-floating">
-                            <label for="floatingInput">Salario: </label><br/>
-                            <s:textfield name="salario" placeholder="Salario (1200)" cssClass="form-control"/>
-
-                        </div>
-                            
-                        <div class="form-floating">
-                            <label for="floatingInput">Rama: </label><br/>
-                            <s:textfield name="rama" placeholder="Motor, chásis..." cssClass="form-control"/>
-
-                        </div>
-                        <s:submit value="Registrarse" name="btnRegistrarse" cssClass="btnModificado w-100 btn mt-3"></s:submit>
-                        <s:fielderror cssClass="pt-3"></s:fielderror>
-                    </s:form>
-                </main>
-
+            <div class="form-floating mb-3">
+                <s:textfield name="nombre" id="nombre" cssClass="form-control" placeholder="Nombre" required="true"/>
+                <label for="nombre">Nombre</label>
             </div>
-        </div>
-    </body>
-</html>
 
+            <div class="form-floating mb-3">
+                <s:password name="password" id="password" cssClass="form-control" placeholder="Contraseña" required="true"/>
+                <label for="password">Contraseña</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <s:textfield name="dni" id="dni" cssClass="form-control" placeholder="DNI" required="true"/>
+                <label for="dni">DNI</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <s:textfield name="salario" id="salario" cssClass="form-control" placeholder="Salario" required="true"/>
+                <label for="salario">Salario (€)</label>
+            </div>
+
+            <div class="form-floating mb-4">
+                <s:textfield name="rama" id="rama" cssClass="form-control" placeholder="Rama" required="true"/>
+                <label for="rama">Rama (Motor, chasis...)</label>
+            </div>
+
+            <s:submit value="Registrarse" name="btnRegistrarse" cssClass="btn btn-success w-100 py-2"/>
+            <s:fielderror cssClass="pt-3 text-danger text-center" />
+        </s:form>
+    </main>
+
+</body>
+</html>

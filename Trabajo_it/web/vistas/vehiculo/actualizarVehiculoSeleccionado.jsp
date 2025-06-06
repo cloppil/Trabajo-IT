@@ -5,10 +5,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Actualizar Vehículo</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/actualizarVehiculo.css" rel="stylesheet">
     </head>
     <body class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa;">
-        <jsp:include page="/vistas/header.jsp" />
+
 
         <div class="container" style="max-width: 500px;">
             <h2 class="text-center mb-4">Actualizar Vehículo</h2>

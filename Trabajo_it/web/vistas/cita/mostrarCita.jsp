@@ -7,9 +7,8 @@
         <title>Mostrar Citas Pendientes</title>
 
         <!-- Bootstrap CSS -->
-        <link href="<s:url value='/css/bootstrap.min.css'/>" rel="stylesheet">
-        <!-- CSS personalizado -->
-        <link href="<s:url value='/css/estilosMostrarCitas.css'/>" rel="stylesheet">
+      <link href="<s:url value='/css/bootstrap.min.css'/>" rel="stylesheet" />
+        <link href="<s:url value='/css/estilosMisVehiculos.css'/>" rel="stylesheet" />
     </head>
     <body class="update-body d-flex align-items-center justify-content-center">
 
