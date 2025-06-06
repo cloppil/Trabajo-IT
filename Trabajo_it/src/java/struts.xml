@@ -41,6 +41,7 @@
         
         <action name = "registroCliente" class = "controlador.RegistroClienteAction">
             <result name = "success">/vistas/iniciarSesionForm.jsp</result>
+            <result name = "input">/vistas/cliente/altaCliente.jsp</result>
         </action>
         
         <action name = "bajaCliente" class = "controlador.BajaClienteAction">
@@ -114,6 +115,7 @@
         
         <action name = "registroMecanico" class="controlador.RegistroMecanicoAction" >
             <result name = "success">/vistas/iniciarSesionForm.jsp</result>
+            <result name = "input">/vistas/mecanico/altaMecanico.jsp</result>
         </action>
 
 
