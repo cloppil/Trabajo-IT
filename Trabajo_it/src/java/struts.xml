@@ -159,6 +159,7 @@
         </action>
         
         <action name = "registroProveedor" class="controlador.RegistroProveedorAction">
+            <result name = "input">/vistas/proveedor/nuevoProveedor.jsp</result>
             <result name = "success">/vistas/mecanico/mecanico.jsp</result>
         </action>
         
@@ -194,6 +195,7 @@
              
         <action name = "irModificarPiezaSeleccionada" class="controlador.IrModificarPiezaSeleccionadaAction">
             <result name="success">/vistas/piezas/modificarPiezaSeleccionada.jsp</result>
+            <result name="error">/vistas/piezas/modificarPieza.jsp</result>
         </action>
         
          <action name = "modificarPieza" class="controlador.ModificarPiezaAction">
