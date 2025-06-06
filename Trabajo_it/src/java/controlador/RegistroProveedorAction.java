@@ -18,21 +18,46 @@ import modelo.Proveedor;
  * @author ferna
  */
 public class RegistroProveedorAction extends ActionSupport {
-    
+
     private String nombre;
     private String email;
     private String direccion;
     private int telefono;
-    
+
     public RegistroProveedorAction() {
     }
-    
+
     public String execute() throws Exception {
         Map<String, Object> session = ActionContext.getContext().getSession();
-        MecanicoDAO mecDAO = new MecanicoDAO(); 
-        Proveedor p = new Proveedor (this.getNombre(), this.getEmail(), this.getDireccion(), this.getTelefono());
+        MecanicoDAO mecDAO = new MecanicoDAO();
+        Proveedor p = new Proveedor(this.getNombre(), this.getEmail(), this.getDireccion(), this.getTelefono());
         mecDAO.altaProveedor(p);
         return SUCCESS;
+    }
+
+    @Override
+    public void validate() {
+        // Validación nombre
+        if (nombre == null || nombre.trim().isEmpty()) {
+            addFieldError("nombre", "El nombre no puede estar vacío.");
+        }
+
+        // Validación email
+        if (email == null || email.trim().isEmpty()) {
+            addFieldError("email", "El email no puede estar vacío.");
+        } else if (!email.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$")) {
+            addFieldError("email", "El formato del email no es válido.");
+        }
+
+        // Validación dirección
+        if (direccion == null || direccion.trim().isEmpty()) {
+            addFieldError("direccion", "La dirección no puede estar vacía.");
+        }
+
+        String telefonoStr = String.valueOf(telefono);
+        if (telefonoStr.length() != 9) {
+            addFieldError("telefono", "El teléfono debe tener exactamente 9 dígitos.");
+        }
     }
 
     public String getNombre() {
@@ -66,5 +91,5 @@ public class RegistroProveedorAction extends ActionSupport {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
-    
+
 }

@@ -18,6 +18,7 @@
 
         <action name = "actualizarCliente" class = "controlador.ActualizarClienteAction">
             <result name = "success">/vistas/cliente/cliente.jsp</result>
+            <result name = "input">/vistas/cliente/actualizarCliente.jsp</result>
         </action>
         
         
@@ -41,6 +42,7 @@
         
         <action name = "registroCliente" class = "controlador.RegistroClienteAction">
             <result name = "success">/vistas/iniciarSesionForm.jsp</result>
+            <result name = "input">/vistas/cliente/altaCliente.jsp</result>
         </action>
         
         <action name = "bajaCliente" class = "controlador.BajaClienteAction">
@@ -117,6 +119,7 @@
         
         <action name = "registroMecanico" class="controlador.RegistroMecanicoAction" >
             <result name = "success">/vistas/iniciarSesionForm.jsp</result>
+            <result name = "input">/vistas/mecanico/altaMecanico.jsp</result>
         </action>
 
 
@@ -147,6 +150,7 @@
         
         <action name = "actualizarMecanico" class = "controlador.ActualizarMecanicoAction">
             <result name = "success">/vistas/mecanico/mecanico.jsp</result>
+            <result name = "input">/vistas/mecanico/actualizarMecanico.jsp</result>
         </action>
         
         <action name = "irConsultarMecanico">
@@ -159,6 +163,7 @@
         </action>
         
         <action name = "registroProveedor" class="controlador.RegistroProveedorAction">
+            <result name = "input">/vistas/proveedor/nuevoProveedor.jsp</result>
             <result name = "success">/vistas/mecanico/mecanico.jsp</result>
         </action>
         
@@ -194,6 +199,7 @@
              
         <action name = "irModificarPiezaSeleccionada" class="controlador.IrModificarPiezaSeleccionadaAction">
             <result name="success">/vistas/piezas/modificarPiezaSeleccionada.jsp</result>
+            <result name="error">/vistas/piezas/modificarPieza.jsp</result>
         </action>
         
          <action name = "modificarPieza" class="controlador.ModificarPiezaAction">
