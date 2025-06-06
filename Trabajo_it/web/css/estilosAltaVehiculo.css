@@ -18,27 +18,51 @@ body.alta-body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* Validación personalizada */
+.needs-validation {
+    /* Si quisieras, podrías añadir aquí estilos al form en general */
+}
+
+/* Etiquetas como bloque y con espacio inferior */
+.needs-validation .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #6c757d; /* texto gris */
+}
+
+/* Inputs 100% ancho y con separación superior */
 .needs-validation .form-control {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
     border-radius: 0.5rem;
 }
 
+/* Botón redondeado */
 .needs-validation .btn {
     border-radius: 0.5rem;
     font-weight: 600;
 }
 
+/* Título */
 .alta-container h1 {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
     color: #0d6efd; /* Bootstrap primary */
 }
 
+/* Alerta informativa */
 .alert {
     font-size: 0.95rem;
     margin-top: 1rem;
     text-align: center;
 }
 
-.needs-validation label.form-label {
-    color: #6c757d; /* texto gris */
+/* Ajuste específico para campos Struts que introducen un div extra */
+.needs-validation .form-group,
+.needs-validation .s2_textfield {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
 }
+
