@@ -24,14 +24,16 @@
                 </p>
 
                 <div class="form-floating mb-3">
-                    <s:textfield name="matricula" id="matricula" cssClass="form-control" placeholder="Matrícula" required="true" />
+                    <s:textfield name="matricula" id="matricula" cssClass="form-control" placeholder="Matrícula"/>
                     <label for="matricula">Matrícula</label>
                 </div>
+                    <s:fielderror fieldName="matricula" />
 
                 <div class="form-floating mb-4">
-                    <s:textfield name="marca" id="marca" cssClass="form-control" placeholder="Marca" required="true" />
+                    <s:textfield name="marca" id="marca" cssClass="form-control" placeholder="Marca"/>
                     <label for="marca">Marca</label>
                 </div>
+                    <s:fielderror fieldName="marca" />
 
                 <s:submit value="Dar de Alta" cssClass="btn btn-primary w-100 py-2" />
             </s:form>

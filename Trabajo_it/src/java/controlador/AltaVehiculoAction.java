@@ -43,8 +43,20 @@ public class AltaVehiculoAction extends ActionSupport implements SessionAware {
         }
     }
 
-    // Getters y Setters
+    @Override
+    public void validate() {
+        if (matricula == null || matricula.trim().isEmpty()) {
+            addFieldError("matricula", "Debe introducir la matrícula.");
+        } else if (!matricula.matches("^\\d{4}[A-Z]{3}$")) {
+            addFieldError("matricula", "Formato inválido. Use 4 números seguidos de 3 letras mayúsculas (ej: 1234ABC).");
+        }
 
+        if (marca == null || marca.trim().isEmpty()) {
+            addFieldError("marca", "Debe introducir la marca del vehículo.");
+        }
+    }
+
+    // Getters y Setters
     public String getMatricula() {
         return matricula;
     }

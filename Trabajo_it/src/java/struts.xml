@@ -56,6 +56,7 @@
         </action>
         
         <action name = "altaVehiculo" class="controlador.AltaVehiculoAction">
+            <result name="input">/vistas/vehiculo/altaVehiculo.jsp</result>
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
         
@@ -76,7 +77,9 @@
         </action>  
              
         <action name = "irActualizarVehiculoSeleccionado" class="controlador.IrActualizarVehiculoSeleccionadoAction">
+            <result name="error">/vistas/vehiculo/actualizarVehiculo.jsp</result>
             <result name="success">/vistas/vehiculo/actualizarVehiculoSeleccionado.jsp</result>
+            
         </action> 
         
 
@@ -122,6 +125,7 @@
         </action>
         
         <action name = "solicitarCita" class = "controlador.SolicitarCitaAction">
+            <result name ="input">/vistas/cita/solicitarCita.jsp</result>
             <result name ="success">/vistas/cliente/cliente.jsp</result>
         </action>
         
@@ -232,6 +236,7 @@
         </action>
 
         <action name = "guardarNuevaFechaCita" class="controlador.GuardarNuevaFechaCitaAction">
+            <result name="input">/vistas/cita/cambiarFechaCitaSeleccionada.jsp</result>
             <result name="success">/vistas/cliente/cliente.jsp</result>
         </action>
         

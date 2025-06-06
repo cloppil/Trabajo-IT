@@ -67,7 +67,6 @@ public class VehiculoDAO {
         return listaVehiculos;
     }
 
-
     public void actualizarVehiculo(Vehiculo vehiculo) {
         Transaction tx = null;
 
@@ -88,5 +87,14 @@ public class VehiculoDAO {
         List<Vehiculo> vehiculos = vehiculoQuery.list();
         tx.commit();
         return vehiculos;
+    }
+
+    public Vehiculo obtnerVehiculoPorMatricula(String matricula, String dni) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("From Vehiculo where matricula = '" + matricula + "'" + "and dniCliente= '" +dni+"'");
+        Vehiculo v = (Vehiculo) q.uniqueResult();
+        tx.commit();
+        return v;
     }
 }

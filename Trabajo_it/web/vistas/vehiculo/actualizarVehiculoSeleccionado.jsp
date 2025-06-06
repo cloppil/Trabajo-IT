@@ -24,6 +24,7 @@
                     <s:hidden name="matricula" value="%{#session.vehiculo.matricula}" />
                 </div>
 
+
                 <!-- Marca editable -->
                 <div class="mb-3">
                     <label for="marca" class="form-label">Nueva Marca</label>

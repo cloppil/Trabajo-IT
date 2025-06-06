@@ -33,7 +33,8 @@
                           listValue="matricula"
                           headerKey=""
                           headerValue="Elige un vehículo"
-                          cssClass="form-select" />
+                          cssClass="form-select" 
+                          required = "true"/>
             </div>
 
             <div class="mb-3">
@@ -47,17 +48,20 @@
                           listValue="nombre"
                           headerKey=""
                           headerValue="Selecciona un mecánico"
-                          cssClass="form-select" />
+                          cssClass="form-select"
+                          required = "true" />
+                          
             </div>
 
             <div class="form-floating mb-4">
                 <s:textfield id="fecha"
-                             name="fecha"
+                             name="fechaTexto"
                              cssClass="form-control"
                              placeholder="Ej: 04/06/2025"
                              required="true" />
-                <label for="fecha"><i class="bi bi-calendar-event me-1"></i> Fecha (dd-mm-aaaa)</label>
+                <label for="fecha"><i class="bi bi-calendar-event me-1"></i> Fecha (dd/mm/aaaa)</label>
             </div>
+                <s:fielderror fieldName="fechaTexto"/>
 
             <s:submit value="📅 Solicitar Cita" cssClass="btn btn-primary w-100 py-2" />
         </s:form>

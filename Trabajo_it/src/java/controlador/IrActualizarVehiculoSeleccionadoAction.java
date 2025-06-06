@@ -30,15 +30,15 @@ public class IrActualizarVehiculoSeleccionadoAction extends ActionSupport {
     public String execute() throws Exception {
 
         Map<String, Object> session = ActionContext.getContext().getSession();
+        Cliente cliente = (Cliente)session.get("cliente");
 
         VehiculoDAO vehiculoDAO = new VehiculoDAO();
-        Vehiculo v = vehiculoDAO.obtnerVehiculoPorMatricula(this.getMatricula());
+        Vehiculo v = vehiculoDAO.obtnerVehiculoPorMatricula(this.getMatricula(), cliente.getDniCliente());
 
         if (v != null) {
             session.put("vehiculo", v);
             return SUCCESS;
         } else {
-
             return ERROR;
         }
     }
