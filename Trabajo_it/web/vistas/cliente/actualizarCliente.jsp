@@ -18,19 +18,19 @@
                     <i class="bi bi-pencil-square me-2"></i>Actualizar Cliente
                 </h1>
 
-                <p class="text-muted mb-4">DNI: <strong><s:property value="#session.cliente.dniCliente"/></strong></p>
-
+                <!-- DNI solo lectura -->
+                <p class="text-muted mb-2">DNI: <strong><s:property value="#session.cliente.dniCliente"/></strong></p>
                 <s:hidden name="dniCliente" />
+
+                <!-- Email solo lectura arriba, igual que DNI -->
+                <p class="text-muted mb-4">Email: <strong><s:property value="#session.cliente.email"/></strong></p>
 
                 <div class="form-floating mb-3">
                     <s:textfield name="nombre" id="nombre" cssClass="form-control" placeholder="Nombre" required="true"/>
                     <label for="nombre">Nombre</label>
                 </div>
 
-                <div class="form-floating mb-3">
-                    <s:textfield name="email" id="email" cssClass="form-control" placeholder="Email" required="true"/>
-                    <label for="email">Email</label>
-                </div>
+                <!-- Eliminado campo email editable -->
 
                 <div class="form-floating mb-3">
                     <s:password name="contrasenia" id="contrasenia" cssClass="form-control" placeholder="Contraseña" required="true"/>
