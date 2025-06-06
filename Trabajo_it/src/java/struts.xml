@@ -18,6 +18,7 @@
 
         <action name = "actualizarCliente" class = "controlador.ActualizarClienteAction">
             <result name = "success">/vistas/cliente/cliente.jsp</result>
+            <result name = "input">/vistas/cliente/actualizarCliente.jsp</result>
         </action>
         
         
@@ -145,6 +146,7 @@
         
         <action name = "actualizarMecanico" class = "controlador.ActualizarMecanicoAction">
             <result name = "success">/vistas/mecanico/mecanico.jsp</result>
+            <result name = "input">/vistas/mecanico/actualizarMecanico.jsp</result>
         </action>
         
         <action name = "irConsultarMecanico">

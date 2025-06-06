@@ -45,7 +45,23 @@ public class ActualizarClienteAction extends ActionSupport {
             return ERROR;
         }
     }
+    public void validate() {
+        if (contrasenia == null || contrasenia.trim().isEmpty()) {
+            addFieldError("password", "La contraseña no puede estar vacía.");
+        } else if (contrasenia.length() < 6) {
+            addFieldError("password", "La contraseña debe tener al menos 6 caracteres.");
+        } else if (!contrasenia.matches(".*[A-Z].*")) {
+            addFieldError("password", "La contraseña debe contener al menos una letra mayúscula.");
+        } else if (!contrasenia.matches(".*[a-z].*")) {
+            addFieldError("password", "La contraseña debe contener al menos una letra minúscula.");
+        }
 
+        String telefonoStr = String.valueOf(telefono);
+
+        if (telefonoStr.length() != 9) {
+            addFieldError("telefono", "El teléfono debe tener exactamente 9 dígitos.");
+        }
+    }
     // Getters y setters (muy importante para que Struts2 funcione)
     public String getDniCliente() {
         return dniCliente;

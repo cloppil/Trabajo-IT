@@ -44,7 +44,7 @@
 
                 <s:submit value="Guardar Cambios" cssClass="btn btn-primary w-100 py-2"/>
             </s:form>
-
+            <s:fielderror cssClass="pt-3 text-danger text-center" />
             <s:if test="mensaje != null">
                 <div class="alert alert-info mt-3">
                     <i class="bi bi-info-circle-fill me-2"></i><s:property value="mensaje"/>

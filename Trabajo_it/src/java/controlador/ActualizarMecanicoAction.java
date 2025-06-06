@@ -8,6 +8,7 @@ package controlador;
 import DAO.MecanicoDAO;
 import static com.opensymphony.xwork2.Action.ERROR;
 import static com.opensymphony.xwork2.Action.SUCCESS;
+import com.opensymphony.xwork2.ActionSupport;
 import javax.servlet.http.HttpSession;
 import modelo.Mecanico;
 import org.apache.struts2.ServletActionContext;
@@ -16,13 +17,14 @@ import org.apache.struts2.ServletActionContext;
  *
  * @author Carlos
  */
-public class ActualizarMecanicoAction {
-   private String dniMecanico;
+public class ActualizarMecanicoAction extends ActionSupport{
+
+    private String dniMecanico;
     private String nombre;
     private String contrasenia;
     private int salario;
     private String rama;
-    
+
     private String mensaje;
 
     public String execute() {
@@ -48,8 +50,26 @@ public class ActualizarMecanicoAction {
             mensaje = "Error al actualizar mecanico: " + e.getMessage();
             return ERROR;
         }
-    
-}
+
+    }
+
+    @Override
+    public void validate() {
+        if (contrasenia == null || contrasenia.trim().isEmpty()) {
+            addFieldError("password", "La contraseña no puede estar vacía.");
+        } else if (contrasenia.length() < 6) {
+            addFieldError("password", "La contraseña debe tener al menos 6 caracteres.");
+        } else if (!contrasenia.matches(".*[A-Z].*")) {
+            addFieldError("password", "La contraseña debe contener al menos una letra mayúscula.");
+        } else if (!contrasenia.matches(".*[a-z].*")) {
+            addFieldError("password", "La contraseña debe contener al menos una letra minúscula.");
+        }
+
+        if (salario <= 0) {
+            addFieldError("salario", "El salario debe ser mayor que cero.");
+        }
+
+    }
 
     public String getDniMecanico() {
         return dniMecanico;
