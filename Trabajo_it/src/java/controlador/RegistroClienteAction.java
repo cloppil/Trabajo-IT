@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import java.util.Map;
 import modelo.Cliente;
-
+import servicios.CorreoCliente;
 /**
  *
  * @author ferna
@@ -29,7 +29,9 @@ public class RegistroClienteAction extends ActionSupport {
     public String execute() throws Exception {
         Map<String, Object> session = ActionContext.getContext().getSession();
         ClienteDAO cliDAO = new ClienteDAO(); 
-        Cliente cli = new Cliente (dni, nombre, "", password,telefono);
+        CorreoCliente correoCliente = new CorreoCliente();
+        String correo = correoCliente.getTextPlain(nombre, dni);
+        Cliente cli = new Cliente (dni, nombre, correo, password,telefono);
         cliDAO.altaCliente(cli);
         return SUCCESS;
     }

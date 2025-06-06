@@ -29,6 +29,7 @@ public class RegistroMecanicoAction extends ActionSupport {
     
     Session session = null;
     
+    @Override
     public String execute() throws Exception {
         
         Map<String, Object> session = ActionContext.getContext().getSession();
