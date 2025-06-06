@@ -8,8 +8,11 @@ package controlador;
 import DAO.MecanicoDAO;
 import static com.opensymphony.xwork2.Action.ERROR;
 import static com.opensymphony.xwork2.Action.SUCCESS;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import java.util.Map;
 import javax.servlet.http.HttpSession;
+import modelo.Cliente;
 import modelo.Mecanico;
 import org.apache.struts2.ServletActionContext;
 
@@ -29,6 +32,7 @@ public class ActualizarMecanicoAction extends ActionSupport{
 
     public String execute() {
         try {
+            Map<String, Object> session = ActionContext.getContext().getSession();
             MecanicoDAO dao = new MecanicoDAO();
 
             Mecanico m = new Mecanico();
@@ -41,8 +45,7 @@ public class ActualizarMecanicoAction extends ActionSupport{
             dao.actualizarMecanico(m);
 
             // ACTUALIZAR EL CLIENTE EN SESIÓN
-            HttpSession session = ServletActionContext.getRequest().getSession();
-            session.setAttribute("mecanico", m);
+            session.put("mecanico", m);
 
             mensaje = "Mecanico actualizado correctamente";
             return SUCCESS;

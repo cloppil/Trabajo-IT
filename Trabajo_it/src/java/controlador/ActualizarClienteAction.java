@@ -9,6 +9,8 @@ import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
 import javax.servlet.http.HttpSession;
 import DAO.ClienteDAO;
+import com.opensymphony.xwork2.ActionContext;
+import java.util.Map;
 import modelo.Cliente;
 
 public class ActualizarClienteAction extends ActionSupport {
@@ -21,22 +23,25 @@ public class ActualizarClienteAction extends ActionSupport {
 
     private String mensaje;
 
+    @Override
     public String execute() {
         try {
+            Map<String, Object> session = ActionContext.getContext().getSession();
+            Cliente clienteAntiguo =(Cliente) session.get("cliente");
+            
+            String correo = clienteAntiguo.getEmail();
             ClienteDAO dao = new ClienteDAO();
-
             Cliente cliente = new Cliente();
             cliente.setDniCliente(dniCliente);
             cliente.setNombre(nombre);
-            cliente.setEmail(email);
+            cliente.setEmail(correo);
             cliente.setContrasenia(contrasenia);
             cliente.setTelefono(telefono);
 
             dao.actualizarCliente(cliente);
 
             // ACTUALIZAR EL CLIENTE EN SESIÓN
-            HttpSession session = ServletActionContext.getRequest().getSession();
-            session.setAttribute("cliente", cliente);
+            session.put("cliente", cliente);
 
             mensaje = "Cliente actualizado correctamente";
             return SUCCESS;

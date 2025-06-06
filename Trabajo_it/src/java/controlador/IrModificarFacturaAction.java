@@ -3,6 +3,8 @@ package controlador;
 import com.opensymphony.xwork2.ActionSupport;
 import modelo.Factura;
 import DAO.FacturaDAO;
+import com.opensymphony.xwork2.ActionContext;
+import java.util.Map;
 import org.apache.struts2.ServletActionContext;
 
 import javax.servlet.http.HttpSession;
@@ -18,8 +20,8 @@ public class IrModificarFacturaAction extends ActionSupport {
 
             if (factura != null) {
                 // Guardamos la factura en sesión para que ModificarFacturaAction la recoja luego
-                HttpSession session = ServletActionContext.getRequest().getSession();
-                session.setAttribute("factura", factura);
+                Map<String, Object> session = ActionContext.getContext().getSession();
+                session.put("factura", factura);
                 return SUCCESS;
             } else {
                 addActionError("No se encontró la factura con ID: " + idFactura);

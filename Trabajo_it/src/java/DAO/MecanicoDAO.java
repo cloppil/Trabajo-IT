@@ -67,6 +67,7 @@ public class MecanicoDAO {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         session.merge(m);
+        tx.commit();
     }
     public void altaProveedor(Proveedor p) {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
