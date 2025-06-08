@@ -14,8 +14,10 @@ CREATE TABLE Cliente (
     telefono INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO Cliente VALUES ('12345678A', 'Juan Pérez', 'juan@example.com', '1234', 600123456);
-INSERT INTO Cliente VALUES ('98765432B', 'María López', 'maria@example.com', 'abcd', 611234567);
+INSERT INTO Cliente VALUES ('12345678A', 'Juan Perez', 'jua123@autofast.com', '123456aA', 600123456);
+INSERT INTO Cliente VALUES ('98765432B', 'Maria Lopez', 'mar987@autofast.com', '123456Bb', 611234567);
+INSERT INTO Cliente VALUES ('12365432H', 'Pepe Sanz', 'pep123@autofast.com', '123456Cc', 611233567);
+INSERT INTO Cliente VALUES ('32165432C', 'Antonio Carrasco', 'ant321@autofast.com', '123456Dd', 821234567);
 
 -- Tabla Vehiculo
 CREATE TABLE Vehiculo (
@@ -24,8 +26,10 @@ CREATE TABLE Vehiculo (
     dniCliente VARCHAR(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO Vehiculo VALUES ('MAT123', 'Toyota', '12345678A');
-INSERT INTO Vehiculo VALUES ('MAT456', 'Honda', '98765432B');
+INSERT INTO Vehiculo VALUES ('1234HZL', 'Toyota', '12345678A');
+INSERT INTO Vehiculo VALUES ('9876JRD', 'Honda', '98765432B');
+INSERT INTO Vehiculo VALUES ('8756WRZ', 'Opel', '12365432H');
+INSERT INTO Vehiculo VALUES ('6158LPN', 'Cupra', '32165432C');
 
 -- Tabla Historial
 CREATE TABLE Proveedor (
@@ -50,8 +54,8 @@ CREATE TABLE Mecanico (
     rama VARCHAR(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO Mecanico VALUES ('11122233X', 1600, 'Carlos Ruiz', 'pass123', 'motor');
-INSERT INTO Mecanico VALUES ('44455566Y', 1700, 'Ana Torres', 'pass456', 'electricidad');
+INSERT INTO Mecanico VALUES ('11122233X', 1600, 'Carlos Ruiz', '123456Aa', 'motor');
+INSERT INTO Mecanico VALUES ('44455566Y', 1700, 'Ana Torres', '123456Bb', 'electricidad');
 
 -- Tabla Cita
 CREATE TABLE Cita (
@@ -61,8 +65,10 @@ CREATE TABLE Cita (
     idMecanico VARCHAR(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO Cita VALUES (1, '2025-06-01', 'MAT123', '11122233X');
-INSERT INTO Cita VALUES (2, '2025-06-02', 'MAT456', '44455566Y');
+INSERT INTO Cita VALUES (1, '2025-06-01', '1234HZL', '11122233X');
+INSERT INTO Cita VALUES (2, '2025-06-02', '8756WRZ', '44455566Y');
+INSERT INTO Cita VALUES (3, '2025-08-11', '6158LPN', '11122233X');
+INSERT INTO Cita VALUES (4, '2025-10-22', '9876JRD', '44455566Y');
 
 -- Tabla Factura
 CREATE TABLE Factura (
@@ -74,7 +80,9 @@ CREATE TABLE Factura (
 
 INSERT INTO Factura (idFactura, importeTotal, fecha, idReparacion) VALUES 
 (1, 250.5, '2025-06-03', 1),
-(2, 175.0, '2025-06-04', 2);
+(2, 20.5, '2025-06-01', 2),
+(3, 57.25, '2025-06-01', 3),
+(4, 175.0, '2025-06-04', 4);
 
 -- Tabla Reparacion
 CREATE TABLE Reparacion (
@@ -86,8 +94,10 @@ CREATE TABLE Reparacion (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO Reparacion VALUES 
-(1, 'Motor', 120.75, 'Cambio aceite', 1),
-(2, 'Frenos', 200.00, 'Sustituir pastillas', 2);
+(1, 'Motor', 250.5, 'Cambio aceite', 1),
+(2, 'Frenos', 20.5, 'Cambio frenos', 2),
+(3, 'Pintura', 57.25, 'Pintar coche', 3),
+(4, 'Frenos', 175.0, 'Sustituir pastillas', 4);
 
 -- Tabla Piezas
 CREATE TABLE Piezas (
